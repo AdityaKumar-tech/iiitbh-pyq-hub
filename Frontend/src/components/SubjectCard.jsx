@@ -3,12 +3,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { FileText, ClipboardList, FlaskConical, BookOpen } from "lucide-react";
 
-const typeIcons = {
-  notes: FileText,
-  pyqs: ClipboardList,
-  labs: FlaskConical,
-  books: BookOpen,
-};
+import { resourceTypes } from "../lib/resourceTypes";
 
 export default function SubjectCard({ subject, semesterId, index }) {
   return (
@@ -38,7 +33,7 @@ export default function SubjectCard({ subject, semesterId, index }) {
 
         <div className="flex items-center gap-4 pt-4 border-t border-line">
           {Object.entries(subject.counts).map(([type, count]) => {
-            const Icon = typeIcons[type];
+            const Icon = resourceTypes[type]?.icon;
             return (
               <span key={type} className="flex items-center gap-1.5 text-xs text-muted">
                 <Icon size={13} />
