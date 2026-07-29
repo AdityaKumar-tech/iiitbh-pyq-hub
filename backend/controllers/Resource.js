@@ -1,7 +1,6 @@
 const Resource = require("../models/Resource");
 const Subject = require("../models/Subject");
 
-// Upload a new resource
 exports.uploadResource = async (req, res) => {
 	try {
 		const { title, description, resourceType, fileUrl, subjectId } = req.body;

@@ -1,10 +1,9 @@
 const Subject = require("../models/Subject");
 const Semester = require("../models/Semester");
 
-// Get a specific subject with its resources
 exports.getSubjectDetails = async (req, res) => {
 	try {
-		const { subjectId } = req.body; // or req.params depending on route setup
+		const { subjectId } = req.body;
 
 		const subjectDetails = await Subject.findById(subjectId)
 			.populate("resources")

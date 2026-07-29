@@ -1,6 +1,5 @@
 const Semester = require("../models/Semester");
 
-// Get all semesters with their subjects
 exports.getAllSemesters = async (req, res) => {
 	try {
 		const allSemesters = await Semester.find({})
@@ -22,7 +21,6 @@ exports.getAllSemesters = async (req, res) => {
 	}
 };
 
-// Create a new semester (Admin)
 exports.createSemester = async (req, res) => {
 	try {
 		const { name } = req.body;
