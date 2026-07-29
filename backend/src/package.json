@@ -1,0 +1,36 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Backend for IIITBH PYQ PROJECT",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "nodemon index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cloudinary": "^2.10.0",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "express-fileupload": "^1.5.2",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.8.1",
+    "nodemailer": "^9.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adityasingh09686/iiitbh-pyq-hub.git"
+  },
+  "bugs": {
+    "url": "https://github.com/adityasingh09686/iiitbh-pyq-hub/issues"
+  },
+  "homepage": "https://github.com/adityasingh09686/iiitbh-pyq-hub#readme",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
