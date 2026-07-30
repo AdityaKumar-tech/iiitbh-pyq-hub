@@ -1,23 +1,23 @@
-const jwt = require("jsonwebtoken");
-require("dotenv").config();
-const User = require("../models/User");
+import jwt from "jsonwebtoken";
+import dotenv from "dotenv";
+dotenv.config();
+import User from "../models/User.model.js";
 
 //auth
-exports.auth = async (req, res, next) => {
+export const auth = async (req, res, next) => {
     try {
-
         console.log("BEFORE ToKEN EXTRACTION");
         //extract token
         const token = req.cookies.token
             || req.body.token
-            || req.header("Authorisation").replace("Bearer ", "");
+            || (req.header("Authorization") ? req.header("Authorization").replace("Bearer ", "") : null);
         console.log("AFTER ToKEN EXTRACTION");
 
         //if token missing, then return response
         if (!token) {
             return res.status(401).json({
                 success: false,
-                message: 'TOken is missing',
+                message: 'Token is missing',
             });
         }
 
@@ -45,7 +45,7 @@ exports.auth = async (req, res, next) => {
 }
 
 //isStudent
-exports.isStudent = async (req, res, next) => {
+export const isStudent = async (req, res, next) => {
     try {
         if (req.user.accountType !== "Student") {
             return res.status(401).json({
@@ -64,7 +64,7 @@ exports.isStudent = async (req, res, next) => {
 }
 
 //isAdmin
-exports.isAdmin = async (req, res, next) => {
+export const isAdmin = async (req, res, next) => {
     try {
         console.log("Printing AccountType ", req.user.accountType);
         if (req.user.accountType !== "Admin") {

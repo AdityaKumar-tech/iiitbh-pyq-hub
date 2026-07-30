@@ -3,32 +3,17 @@ const nodemailer = require('nodemailer');
 const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        user: process.env.EMAIL_USER, 
-        pass: process.env.EMAIL_PASS  
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS
     }
 });
 
 const sendWelcomeEmail = async (userEmail, userName) => {
-    
-    // The HTML version - rewritten to sound more human and conversational
     const htmlTemplate = `
     <!DOCTYPE html>
     <html>
     <head>
         <meta charset="utf-8">
-        <style>
-            body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background-color: #f4f7f6; margin: 0; padding: 0; }
-            .container { max-width: 600px; margin: 40px auto; background-color: #ffffff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
-            .header { background-color: #4f46e5; padding: 25px 20px; text-align: center; color: #ffffff; }
-            .header h1 { margin: 0; font-size: 22px; font-weight: 600; }
-            .content { padding: 30px 40px; color: #333333; line-height: 1.6; font-size: 15px; }
-            .content h2 { color: #1f2937; font-size: 18px; margin-top: 0; }
-            .highlight-box { background-color: #f8fafc; padding: 15px 20px; border-radius: 6px; margin: 20px 0; border-left: 4px solid #4f46e5; }
-            .btn-container { margin: 30px 0; }
-            .btn { background-color: #4f46e5; color: #ffffff; text-decoration: none; padding: 12px 24px; border-radius: 6px; font-weight: 600; display: inline-block; transition: opacity 0.3s; }
-            .btn:hover { opacity: 0.9; }
-            .footer { background-color: #f9fafb; padding: 20px; text-align: center; font-size: 13px; color: #6b7280; border-top: 1px solid #e5e7eb; }
-        </style>
     </head>
     <body>
         <div class="container">

@@ -1,7 +1,7 @@
-const Subject = require("../models/Subject");
-const Semester = require("../models/Semester");
+import Subject from "../models/Subject.js";
+import Semester from "../models/Semester.js";
 
-exports.getSubjectDetails = async (req, res) => {
+export const getSubjectDetails = async (req, res) => {
 	try {
 		const { subjectId } = req.body;
 
@@ -29,7 +29,7 @@ exports.getSubjectDetails = async (req, res) => {
 };
 
 // Create a new subject (Admin)
-exports.createSubject = async (req, res) => {
+export const createSubject = async (req, res) => {
 	try {
 		const { name, code, description, semesterId } = req.body;
 
@@ -63,5 +63,47 @@ exports.createSubject = async (req, res) => {
 			message: "Failed to create subject",
 			error: error.message,
 		});
+	}
+};
+
+export const updateSubject = async (req, res) => {
+	try {
+		const { id, name, code, description } = req.body;
+		if (!id) return res.status(400).json({ success: false, message: "Subject ID is required" });
+
+		const updatedSubject = await Subject.findByIdAndUpdate(
+			id,
+			{ name, code, description },
+			{ new: true }
+		);
+
+		if (!updatedSubject) return res.status(404).json({ success: false, message: "Subject not found" });
+
+		res.status(200).json({ success: true, message: "Subject updated", data: updatedSubject });
+	} catch (error) {
+		console.error(error);
+		res.status(500).json({ success: false, message: "Failed to update subject", error: error.message });
+	}
+};
+
+export const deleteSubject = async (req, res) => {
+	try {
+		const { id } = req.body;
+		if (!id) return res.status(400).json({ success: false, message: "Subject ID is required" });
+
+		const deletedSubject = await Subject.findByIdAndDelete(id);
+		if (!deletedSubject) return res.status(404).json({ success: false, message: "Subject not found" });
+
+		// Remove from Semester if necessary (depending on schema logic)
+		if (deletedSubject.semester) {
+			await Semester.findByIdAndUpdate(deletedSubject.semester, {
+				$pull: { subjects: deletedSubject._id }
+			});
+		}
+
+		res.status(200).json({ success: true, message: "Subject deleted" });
+	} catch (error) {
+		console.error(error);
+		res.status(500).json({ success: false, message: "Failed to delete subject", error: error.message });
 	}
 };
