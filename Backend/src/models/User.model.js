@@ -30,23 +30,48 @@ const userSchema = new mongoose.Schema({
     required: [true, 'Roll number is required'],
     unique: true,
     trim: true
-  }
+  },
+  resetPasswordToken: {
+    type: String,
+  },
+  resetPasswordExpires: {
+    type: Date,
+  },
+  accountType: {
+    type: String,
+    enum: ["Student", "Admin"],
+    required: true,
+  },
+  profile: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "Profile",
+  },
+  bookmarks: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Resource",
+    },
+  ],
+  downloadedResources: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Resource",
+    },
+  ],
+  image: {
+    type: String,
+  },
 }, {
   timestamps: true
 });
 
 // Pre-save hook to hash password before saving
-userSchema.pre('save', async function(next) {
+userSchema.pre('save', async function() {
   if (!this.isModified('password')) {
-    return next();
+    return;
   }
-  try {
-    const salt = await bcrypt.genSalt(10);
-    this.password = await bcrypt.hash(this.password, salt);
-    next();
-  } catch (error) {
-    next(error);
-  }
+  const salt = await bcrypt.genSalt(10);
+  this.password = await bcrypt.hash(this.password, salt);
 });
 
 userSchema.methods.comparePassword = async function(candidatePassword) {

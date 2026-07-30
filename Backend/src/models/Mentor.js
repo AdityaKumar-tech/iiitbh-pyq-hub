@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
 const mentorSchema = new mongoose.Schema({
 	name: {
@@ -31,4 +31,4 @@ const mentorSchema = new mongoose.Schema({
 	},
 }, { timestamps: true });
 
-module.exports = mongoose.model("Mentor", mentorSchema);
+export default mongoose.model("Mentor", mentorSchema);

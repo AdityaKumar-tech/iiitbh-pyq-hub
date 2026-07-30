@@ -1,11 +1,13 @@
 import app from './app.js';
 import connectDB from './config/db.config.js';
+import { cloudinaryConnect } from './config/cloudinary.js';
 
 const PORT = process.env.PORT || 5000;
 
 const startServer = async () => {
   try {
     await connectDB();
+    cloudinaryConnect();
     app.listen(PORT, () => {
       console.log(`Server is running on port ${PORT}`);
     });

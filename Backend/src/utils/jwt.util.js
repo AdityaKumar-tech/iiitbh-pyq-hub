@@ -9,15 +9,16 @@ import jwt from 'jsonwebtoken';
  * @param {string} userData.email - User's email address
  * @returns {string} Signed JWT token
  */
-export const generateToken = ({ mongo_id, rollNo, email }) => {
-  if (!mongo_id || !rollNo || !email) {
-    throw new Error('Token creation failed: mongo_id, rollNo, and email are required');
+export const generateToken = ({ id, rollNo, email, accountType }) => {
+  if (!id || !rollNo || !email || !accountType) {
+    throw new Error('Token creation failed: id, rollNo, accountType, and email are required');
   }
 
   const payload = {
-    mongo_id,
+    id,
     rollNo,
-    email
+    email,
+    accountType
   };
 
   const secret = process.env.JWT_SECRET || 'supersecretjwtkey1234567890';

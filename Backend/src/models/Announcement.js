@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
 const announcementSchema = new mongoose.Schema({
 	title: {
@@ -21,4 +21,4 @@ const announcementSchema = new mongoose.Schema({
 	},
 }, { timestamps: true });
 
-module.exports = mongoose.model("Announcement", announcementSchema);
+export default mongoose.model("Announcement", announcementSchema);

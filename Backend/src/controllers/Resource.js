@@ -1,13 +1,25 @@
-const Resource = require("../models/Resource");
-const Subject = require("../models/Subject");
+import Resource from "../models/Resource.js"; 
+import Subject from "../models/Subject.js";
+import { uploadImageToCloudinary } from "../utils/fileUpload.js";
 
-exports.uploadResource = async (req, res) => {
+export const uploadResource = async (req, res) => {
 	try {
-		const { title, description, resourceType, fileUrl, subjectId } = req.body;
-		const userId = req.user.id; // Assumes auth middleware sets req.user
+		let { title, description, resourceType, fileUrl, subjectId } = req.body;
+		const userId = req.user.id;
 
-		if (!title || !resourceType || !fileUrl || !subjectId) {
-			return res.status(400).json({ success: false, message: "Missing required fields" });
+		if (!title || !subjectId) {
+			return res.status(400).json({ success: false, message: "Missing required fields: title, subjectId" });
+		}
+
+		if (!resourceType) resourceType = "PYQ";
+
+		if (!fileUrl && req.files && req.files.file) {
+			const uploadedResource = await uploadImageToCloudinary(req.files.file, process.env.FOLDER_NAME || "resources");
+			fileUrl = uploadedResource.secure_url;
+		}
+
+		if (!fileUrl) {
+			return res.status(400).json({ success: false, message: "Missing fileUrl or physical file upload" });
 		}
 
 		const newResource = await Resource.create({
@@ -42,7 +54,7 @@ exports.uploadResource = async (req, res) => {
 };
 
 // Increment download count
-exports.incrementDownload = async (req, res) => {
+export const incrementDownload = async (req, res) => {
 	try {
 		const { resourceId } = req.body;
 
@@ -72,7 +84,7 @@ exports.incrementDownload = async (req, res) => {
 };
 
 // Search resources
-exports.searchResources = async (req, res) => {
+export const searchResources = async (req, res) => {
 	try {
 		const { query } = req.body;
 
@@ -100,5 +112,26 @@ exports.searchResources = async (req, res) => {
 			message: "Failed to search resources",
 			error: error.message,
 		});
+	}
+};
+
+export const deleteResource = async (req, res) => {
+	try {
+		const { id } = req.body;
+		if (!id) return res.status(400).json({ success: false, message: "Resource ID is required" });
+
+		const deletedResource = await Resource.findByIdAndDelete(id);
+		if (!deletedResource) return res.status(404).json({ success: false, message: "Resource not found" });
+
+		if (deletedResource.subjectId) {
+			await Subject.findByIdAndUpdate(deletedResource.subjectId, {
+				$pull: { resources: deletedResource._id }
+			});
+		}
+
+		res.status(200).json({ success: true, message: "Resource deleted" });
+	} catch (error) {
+		console.error(error);
+		res.status(500).json({ success: false, message: "Failed to delete resource", error: error.message });
 	}
 };
