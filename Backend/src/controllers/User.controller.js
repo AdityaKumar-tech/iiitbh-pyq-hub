@@ -66,6 +66,14 @@ export const signup = async (req, res) => {
       email: newUser.email
     });
 
+    // setting the cookie (access) for the next 7 days
+    res.cookie("token", token, {
+      httpOnly: true,
+      secure: process.env.NODE_ENV === "production",
+      sameSite: "strict",
+      maxAge: 7 * 24 * 60 * 60 * 1000,
+    });
+
     return res.status(201).json({
       success: true,
       message: 'User registered successfully',
@@ -87,3 +95,83 @@ export const signup = async (req, res) => {
     });
   }
 };
+
+/// Adding the login controller to the folder
+
+export const login = async (req, res) => {
+  try {
+
+    const { email, password } = req.body;
+
+    if (!email || !password) {
+      return res.status(400).json({
+        success: false,
+        message: "Empty Password or Email field"
+      });
+    }
+
+    const normalizedEmail = email.toLowerCase().trim();
+
+    const user = await User.findOne({ email: normalizedEmail });
+
+    if (!user) {
+      return res.status(401).json({
+        success: false,
+        message: "User does not exist",
+      });
+    }
+
+    // Matching the password entered by the user
+    const isMatch = await user.comparePassword(password);
+
+    if (!isMatch) {
+      return res.status(401).json({
+        success: false,
+        message: "Invalid Password"
+      })
+    }
+
+    const token = generateToken({
+      mongo_id: user._id.toString(),
+      rollNo: user.rollNumber,
+      email: user.email,
+    });
+
+    res.cookie("token", token, {
+      httpOnly: true,
+      secure: process.env.NODE_ENV === "production",
+      sameSite: "strict",
+      maxAge: 7 * 24 * 60 * 60 * 1000,
+    });
+
+    return res.status(200).json({
+      success: true,
+      message: "Login successful",
+      user: {
+        id: user._id,
+        name: user.name,
+        email: user.email,
+        rollNumber: user.rollNumber,
+      },
+    });
+  } catch (error) {
+    return res.status(500).json({
+      success: false,
+      message: "Error occurring while login / INTERNAL SERVER ERROR",
+      error: error.message
+    });
+  }
+}
+
+// Logout controller (clears the cookie)
+export const logout = (req, res) => {
+
+  res.clearCookie("token");
+  return res.status(200).json({
+    success: true,
+    message: "Logged out successfully",
+  });
+};
+
+
+
