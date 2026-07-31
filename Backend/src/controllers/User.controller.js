@@ -1,4 +1,4 @@
-import User from '../models/User.model.js'; 
+import User from '../models/User.model.js';
 import OTP from '../models/OTP.js';
 import Profile from '../models/Profile.js';
 import { generateToken } from '../utils/jwt.util.js';
@@ -145,18 +145,35 @@ export const otpSender = async (req, res) => {
 
     const normalizedEmail = email.toLowerCase().trim();
     const allowedDomain = process.env.ALLOWED_EMAIL_DOMAIN || 'iiitbh.ac.in';
-    
+
     if (!normalizedEmail.endsWith(`@${allowedDomain}`)) {
       return res.status(400).json({ success: false, message: `OTP can only be sent to @${allowedDomain} emails` });
     }
+
+    // Adding the rate-limiting in the otp sender request(to prevent otp booming bug)
+    // Check if an OTP was recently sent ( within the last 60 seconds)
+    // find the lastest otp sent for the user
+    const recentOtp = await OTP.findOne({ email: normalizedEmail }).sort({ createdAt: -1 });
+    if (recentOtp) {
+      const oneMinuteAgo = Date.now() - (60 * 1000);
+      if (recentOtp.createdAt.getTime() > oneMinuteAgo) {
+        return res.status(429).json({
+          success: false,
+          message: "Please wait a minute before requesting another OTP."
+        });
+      }
+    }
+
+    // end of the rate limiting
     const otp = Math.floor(100000 + Math.random() * 900000).toString();
-    const newOTP = new OTP({ email, otp });
+    const newOTP = new OTP({ email: normalizedEmail, otp });
     await newOTP.save();
     return res.status(200).json({ success: true, message: "OTP sent" });
   } catch (error) {
     return res.status(500).json({ success: false, error: error.message });
   }
 };
+
 
 export const changePassword = async (req, res) => {
   try {

@@ -11,10 +11,18 @@ export const uploadImageToCloudinary = async (file, folder, height, quality) => 
             options.quality = quality;
         }
         options.resource_type = "auto";
-        return await cloudinary.uploader.upload(file.tempFilePath, options);
-
+        const result = await cloudinary.uploader.upload(file.tempFilePath, options);
+        return result;
     } catch (error) {
         console.error(error);
         throw error;
+    } finally {
+        if (file && file.tempFilePath) {
+            try {
+                fs.unlinkSync(file.tempFilePath);
+            } catch (err) {
+                console.error("Failed to delete temp file:", err);
+            }
+        }
     }
 }
