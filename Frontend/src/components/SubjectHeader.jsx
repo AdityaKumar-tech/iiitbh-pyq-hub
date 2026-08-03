@@ -26,12 +26,6 @@ export default function SubjectHeader({ subject, semesterId }) {
           </div>
         </div>
 
-        <button
-          className="flex items-center gap-2 self-start rounded-lg border border-line px-4 py-2 text-sm font-medium text-ink hover:bg-[#F8FAFC] transition-colors"
-        >
-          <Bookmark size={15} />
-          Save subject
-        </button>
       </div>
 
       <div className="flex flex-wrap items-center gap-6 mt-6">
