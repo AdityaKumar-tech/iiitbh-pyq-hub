@@ -1,21 +1,88 @@
 @import "tailwindcss";
 
-@theme {
-  /* Colors */
-  --color-primary: #4F46E5;
-  --color-secondary: #6366F1;
-  --color-ink: #0F172A;
-  --color-muted: #64748B;
-  --color-line: #E2E8F0;
+/* ===========================
+   LIGHT THEME (Default)
+=========================== */
 
-  /* Border Radius */
+:root {
+  --background: #F7F8FA;
+  --surface: #FFFFFF;
+  --surface-secondary: #EDEFF3;
+
+  --text: #10141C;
+  --text-muted: #626B7A;
+
+  --primary: #1B2A4A;
+  --primary-light: #2F4570;
+
+  --secondary: #B4923B;
+  --secondary-light: #CDAD5C;
+
+  --border: #E2E5EB;
+
+  --shadow-rest: 0 1px 2px rgba(16,20,28,.05),
+                 0 1px 1px rgba(16,20,28,.04);
+
+  --shadow-hover: 0 20px 40px -12px rgba(27,42,74,.18),
+                  0 4px 12px rgba(16,20,28,.06);
+}
+
+/* ===========================
+   DARK THEME
+=========================== */
+
+.dark {
+  --background: #0A0E16;
+  --surface: #121826;
+  --surface-secondary: #1B2333;
+
+  --text: #F3F5F8;
+  --text-muted: #939BAA;
+
+  --primary: #5C7CBF;
+  --primary-light: #7C97D0;
+
+  --secondary: #E0BE72;
+  --secondary-light: #EDD196;
+
+  --border: rgba(255,255,255,.08);
+
+  --shadow-rest: 0 1px 3px rgba(0,0,0,.5);
+
+  --shadow-hover: 0 24px 50px rgba(0,0,0,.6),
+                  0 0 40px -10px rgba(92,124,191,.15);
+}
+
+/* ===========================
+   Tailwind Theme
+=========================== */
+
+@theme {
+
+  /* Colors */
+
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-secondary);
+
+  --color-primary: var(--primary);
+  --color-primary-light: var(--primary-light);
+
+  --color-secondary: var(--secondary);
+  --color-secondary-light: var(--secondary-light);
+
+  --color-ink: var(--text);
+  --color-muted: var(--text-muted);
+
+  --color-line: var(--border);
+
+  /* Radius */
+
   --radius-card: 14px;
   --radius-hero: 20px;
 
   /* Shadows */
-  --shadow-rest: 0 1px 2px rgba(15,23,42,0.04),
-                 0 1px 1px rgba(15,23,42,0.03);
 
-  --shadow-hover: 0 20px 40px -12px rgba(79,70,229,0.18),
-                  0 4px 12px rgba(15,23,42,0.05);
+  --shadow-rest: var(--shadow-rest);
+  --shadow-hover: var(--shadow-hover);
 }

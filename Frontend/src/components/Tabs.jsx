@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export default function Tabs({ tabs, active, onChange }) {
   return (
-    <div className="flex gap-6 overflow-x-auto border-b border-line mb-8 -mx-1 px-1">
+    <div className="flex gap-6 border-b border-line mb-8 -mx-1 px-1">
       {tabs.map((tab) => {
         const isActive = tab.key === active;
         return (
