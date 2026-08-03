@@ -1,4 +1,4 @@
-import Resource from "../models/Resource.js"; 
+import Resource from "../models/Resource.js";
 import Subject from "../models/Subject.js";
 import { uploadImageToCloudinary } from "../utils/fileUpload.js";
 
@@ -123,8 +123,8 @@ export const deleteResource = async (req, res) => {
 		const deletedResource = await Resource.findByIdAndDelete(id);
 		if (!deletedResource) return res.status(404).json({ success: false, message: "Resource not found" });
 
-		if (deletedResource.subjectId) {
-			await Subject.findByIdAndUpdate(deletedResource.subjectId, {
+		if (deletedResource.subject) {
+			await Subject.findByIdAndUpdate(deletedResource.subject, {
 				$pull: { resources: deletedResource._id }
 			});
 		}
