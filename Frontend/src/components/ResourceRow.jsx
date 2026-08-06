@@ -1,5 +1,4 @@
 // src/components/ResourceRow.jsx
-
 import { Download, Eye, FileText } from "lucide-react";
 
 export default function ResourceRow({ resource, Icon = FileText, badge, onPreview, onDownload }) {
