@@ -34,8 +34,9 @@ export default function Navbar() {
 
         <NavLink
           to="/"
-          className="text-lg font-bold tracking-tight text-ink"
+          className="text-lg font-bold tracking-tight text-ink flex items-center gap-2"
         >
+          <img src="/logo.png" alt="Adhyaay Logo" className="h-8 w-auto rounded-full object-cover dark:bg-white" />
           Adhyaay
         </NavLink>
 

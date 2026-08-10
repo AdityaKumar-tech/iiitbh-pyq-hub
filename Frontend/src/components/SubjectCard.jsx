@@ -36,8 +36,10 @@ export default function SubjectCard({ subject, semesterId, index }) {
           <div>
             <div className="flex items-center justify-between gap-3">
               <div className="flex items-center gap-3">
-                <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-primary/10 text-primary border border-primary/20 shadow-xs transition-transform duration-300 group-hover:scale-105">
+                <div className="relative flex h-11 w-11 items-center justify-center rounded-2xl bg-primary/10 text-primary border border-primary/20 shadow-xs transition-transform duration-300 group-hover:scale-105">
                   <BookOpen size={20} />
+                  {/* Green LED Light */}
+                  <div className="absolute -top-1 -right-1 h-3 w-3 rounded-full bg-green-500 opacity-0 group-hover:opacity-100 transition-all duration-300 shadow-[0_0_10px_rgba(34,197,94,0.8)]" />
                 </div>
 
                 <span className="inline-flex rounded-full bg-surface-2 px-3 py-1 text-xs font-semibold text-ink/80 border border-line/60">
@@ -63,36 +65,8 @@ export default function SubjectCard({ subject, semesterId, index }) {
             )}
           </div>
 
-          {/* Resource Count Stats */}
-          <div className="mt-6 pt-4 border-t border-line/50 grid grid-cols-2 gap-3">
-            <div className="flex items-center gap-2.5 rounded-xl border border-line/40 bg-surface-2/60 px-3 py-2.5">
-              <div className="rounded-lg bg-primary/10 p-1.5 text-primary">
-                <FileText size={15} />
-              </div>
-              <div className="min-w-0">
-                <p className="text-[10px] font-semibold uppercase tracking-wider text-muted/70 leading-none mb-1">
-                  Notes
-                </p>
-                <p className="font-bold text-ink text-xs leading-none">
-                  {subject.counts?.notes ?? 0}
-                </p>
-              </div>
-            </div>
-
-            <div className="flex items-center gap-2.5 rounded-xl border border-line/40 bg-surface-2/60 px-3 py-2.5">
-              <div className="rounded-lg bg-secondary/10 p-1.5 text-secondary">
-                <ClipboardList size={15} />
-              </div>
-              <div className="min-w-0">
-                <p className="text-[10px] font-semibold uppercase tracking-wider text-muted/70 leading-none mb-1">
-                  PYQs
-                </p>
-                <p className="font-bold text-ink text-xs leading-none">
-                  {subject.counts?.pyqs ?? 0}
-                </p>
-              </div>
-            </div>
-          </div>
+          {/* Minimal Bottom Spacer */}
+          <div className="mt-6 pt-4 border-t border-line/50" />
         </div>
       </Link>
     </motion.div>

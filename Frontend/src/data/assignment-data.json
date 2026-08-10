@@ -1,0 +1,148 @@
+{
+  "semesters": [
+    {
+      "semester_number": 1,
+      "title": "Semester 1",
+      "description": "First year, Odd Semester",
+      "folder_id": "placeholder_assignment_folder_id_sem1",
+      "subjects": [
+        {
+          "subject_code": "MA101",
+          "subject_name": "Mathematics I",
+          "folder_id": "placeholder_assignment_folder_id_ma101"
+        },
+        {
+          "subject_code": "PH101",
+          "subject_name": "Physics",
+          "folder_id": "placeholder_assignment_folder_id_ph101"
+        }
+      ]
+    },
+    {
+      "semester_number": 2,
+      "title": "Semester 2",
+      "description": "First year, Even Semester",
+      "folder_id": "placeholder_assignment_folder_id_sem2",
+      "subjects": [
+        {
+          "subject_code": "MA102",
+          "subject_name": "Mathematics II",
+          "folder_id": "placeholder_assignment_folder_id_ma102"
+        },
+        {
+          "subject_code": "CS101",
+          "subject_name": "Programming in C",
+          "folder_id": "placeholder_assignment_folder_id_cs101"
+        }
+      ]
+    },
+    {
+      "semester_number": 3,
+      "title": "Semester 3",
+      "description": "Second year, Odd Semester",
+      "folder_id": "placeholder_assignment_folder_id_sem3",
+      "subjects": [
+        {
+          "subject_code": "CS201",
+          "subject_name": "Data Structures",
+          "folder_id": "placeholder_assignment_folder_id_cs201"
+        },
+        {
+          "subject_code": "EC201",
+          "subject_name": "Digital Logic",
+          "folder_id": "placeholder_assignment_folder_id_ec201"
+        }
+      ]
+    },
+    {
+      "semester_number": 4,
+      "title": "Semester 4",
+      "description": "Second year, Even Semester",
+      "folder_id": "placeholder_assignment_folder_id_sem4",
+      "subjects": [
+        {
+          "subject_code": "CS202",
+          "subject_name": "Algorithms",
+          "folder_id": "placeholder_assignment_folder_id_cs202"
+        },
+        {
+          "subject_code": "CS204",
+          "subject_name": "Computer Organization",
+          "folder_id": "placeholder_assignment_folder_id_cs204"
+        }
+      ]
+    },
+    {
+      "semester_number": 5,
+      "title": "Semester 5",
+      "description": "Third year, Odd Semester",
+      "folder_id": "placeholder_assignment_folder_id_sem5",
+      "subjects": [
+        {
+          "subject_code": "CS301",
+          "subject_name": "Operating Systems",
+          "folder_id": "placeholder_assignment_folder_id_cs301"
+        },
+        {
+          "subject_code": "CS303",
+          "subject_name": "Database Management Systems",
+          "folder_id": "placeholder_assignment_folder_id_cs303"
+        }
+      ]
+    },
+    {
+      "semester_number": 6,
+      "title": "Semester 6",
+      "description": "Third year, Even Semester",
+      "folder_id": "placeholder_assignment_folder_id_sem6",
+      "subjects": [
+        {
+          "subject_code": "CS302",
+          "subject_name": "Computer Networks",
+          "folder_id": "placeholder_assignment_folder_id_cs302"
+        },
+        {
+          "subject_code": "CS304",
+          "subject_name": "Software Engineering",
+          "folder_id": "placeholder_assignment_folder_id_cs304"
+        }
+      ]
+    },
+    {
+      "semester_number": 7,
+      "title": "Semester 7",
+      "description": "Fourth year, Odd Semester",
+      "folder_id": "placeholder_assignment_folder_id_sem7",
+      "subjects": [
+        {
+          "subject_code": "CS401",
+          "subject_name": "Machine Learning",
+          "folder_id": "placeholder_assignment_folder_id_cs401"
+        },
+        {
+          "subject_code": "CS403",
+          "subject_name": "Cloud Computing",
+          "folder_id": "placeholder_assignment_folder_id_cs403"
+        }
+      ]
+    },
+    {
+      "semester_number": 8,
+      "title": "Semester 8",
+      "description": "Fourth year, Even Semester",
+      "folder_id": "placeholder_assignment_folder_id_sem8",
+      "subjects": [
+        {
+          "subject_code": "CS402",
+          "subject_name": "Information Security",
+          "folder_id": "placeholder_assignment_folder_id_cs402"
+        },
+        {
+          "subject_code": "CS499",
+          "subject_name": "Project Work",
+          "folder_id": "placeholder_assignment_folder_id_cs499"
+        }
+      ]
+    }
+  ]
+}

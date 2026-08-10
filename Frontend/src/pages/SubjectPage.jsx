@@ -57,6 +57,7 @@ export default function SubjectPage() {
 
   const [sourceItems, setSourceItems] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
   const [activeTab, setActiveTab] = useState("pyqs");
 
   useEffect(() => {
@@ -71,12 +72,19 @@ export default function SubjectPage() {
 
     if (folderIdToFetch) {
       setLoading(true);
-      fetchPYQsFromDrive(folderIdToFetch).then((files) => {
-        setSourceItems(Array.isArray(files) ? files : []);
+      setError(null);
+      fetchPYQsFromDrive(folderIdToFetch).then((result) => {
+        if (result && result.error) {
+          setError(result.error);
+          setSourceItems([]);
+        } else {
+          setSourceItems(Array.isArray(result) ? result : []);
+        }
         setLoading(false);
       });
     } else {
       setSourceItems([]);
+      setError(null);
       setLoading(false);
     }
   }, [subject, activeTab]);
@@ -170,6 +178,18 @@ export default function SubjectPage() {
                     {Array.from({ length: 3 }).map((_, i) => (
                       <ResourceRowSkeleton key={i} />
                     ))}
+                  </div>
+                ) : error ? (
+                  <div className="p-12 sm:p-16 rounded-card border border-red-500/20 bg-red-500/5 text-center flex flex-col items-center justify-center">
+                    <div className="w-14 h-14 rounded-2xl bg-red-500/10 border border-red-500/20 text-red-500 flex items-center justify-center mb-3 shadow-xs">
+                      <AlertCircle size={22} />
+                    </div>
+                    <h3 className="text-sm font-bold text-ink">
+                      Failed to load files
+                    </h3>
+                    <p className="text-xs text-red-400 mt-1 max-w-md leading-relaxed font-medium">
+                      {error}
+                    </p>
                   </div>
                 ) : (
                   <AnimatePresence mode="wait">

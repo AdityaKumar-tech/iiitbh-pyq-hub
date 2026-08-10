@@ -270,8 +270,8 @@
           "code": "",
           "name": "Analog Communication",
           "folder_id": "1hZ0g8JmuNjT2Ja0J2-BGhLxBFRcCWs6B",
-          "pyqs_folder_id": "",
-          "notes_folder_id": "",
+          "pyqs_folder_id": "1Yd4XOCufB_rsiRo3rw0M2Mo1h4JPZm_N",
+          "notes_folder_id": "1q1UsDUBHjFK8smez_d0WGVXgMDocmjTY",
           "branch": "ece"
         },
         {
@@ -279,8 +279,8 @@
           "code": "",
           "name": "Analog Integrated ckt",
           "folder_id": "1O6NrQWhiNNGqakKHw0VxxPoxhqKOYH5u",
-          "pyqs_folder_id": "",
-          "notes_folder_id": "",
+          "pyqs_folder_id": "1Z6dXJbG-2Mthh26otQSrIhRjxHVx83eS",
+          "notes_folder_id": "1snrZEgJGcqLbXQ0dM-DnpGWQpDJHADAt",
           "branch": "ece"
         },
         {
@@ -297,8 +297,8 @@
           "code": "",
           "name": "COA",
           "folder_id": "1w9rhWv57Xm-EPugkvSUoTMilykfqSc4b",
-          "pyqs_folder_id": "",
-          "notes_folder_id": "",
+          "pyqs_folder_id": "13GIq4tDoPp12w8i5ql4_F6Lixd1r4B07",
+          "notes_folder_id": "1xCEHus4LaLVSpTICoKYXzdySYYth3FQs",
           "branch": "ece"
         },
         {
@@ -360,8 +360,8 @@
           "code": "",
           "name": "OOPs",
           "folder_id": "1-rPk23hCHQUWo_P3PUXdgTZ3XCFGW6rS",
-          "pyqs_folder_id": "",
-          "notes_folder_id": "",
+          "pyqs_folder_id": "1JjSRArfMLNXQitvyUIyInabXpwmCyl39",
+          "notes_folder_id": "1WH-e_LhmG4cZU6qeY4qa43IJul1gRm4U",
           "branch": "ece"
         },
         {
@@ -396,8 +396,8 @@
           "code": "",
           "name": "Probability",
           "folder_id": "1VFOzmcpCAZMVN35VMAtt6vwzoCWJ8MI2",
-          "pyqs_folder_id": "",
-          "notes_folder_id": "",
+          "pyqs_folder_id": "1QBLyemkLnTEdE_Lgvccl3QMmb_xmaeCo",
+          "notes_folder_id": "1jNMT2eL4t_SaFBl24UuNUjp9PVXxTKjx",
           "branch": "ece"
         },
         {
@@ -450,8 +450,8 @@
           "code": "",
           "name": "VAC ( evs)",
           "folder_id": "1sK8nvTprvq3XXcgYBIBJIWyk9OjHRbFg",
-          "pyqs_folder_id": "",
-          "notes_folder_id": "",
+          "pyqs_folder_id": "1cY_TDfJOalVGqWAc2orK6LTBEx25ZdNe",
+          "notes_folder_id": "1tOQ7hDOnDE40cSmUyptmaFAm8q8Jmx90",
           "branch": "ece"
         }
       ]

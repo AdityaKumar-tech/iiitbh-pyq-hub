@@ -42,6 +42,8 @@ export default function ResourceRow({ resource, Icon = FileText, badge, onPrevie
         {/* Preview Button */}
         <a
           href={resource.viewUrl || "#"}
+          target="_blank"
+          rel="noopener noreferrer"
           onClick={onPreview ? (e) => { e.preventDefault(); onPreview(resource); } : undefined}
           aria-label={`Preview ${resource.title}`}
           className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold text-muted border border-line/60 bg-surface hover:bg-surface-2 hover:text-ink transition-all duration-200"
@@ -53,6 +55,8 @@ export default function ResourceRow({ resource, Icon = FileText, badge, onPrevie
         {/* Download Button */}
         <a
           href={resource.downloadUrl || "#"}
+          target="_blank"
+          rel="noopener noreferrer"
           onClick={onDownload ? (e) => { e.preventDefault(); onDownload(resource); } : undefined}
           aria-label={`Download ${resource.title}`}
           className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-primary text-surface hover:bg-primary-light active:scale-[0.98] transition-all duration-200 shadow-xs cursor-pointer"
