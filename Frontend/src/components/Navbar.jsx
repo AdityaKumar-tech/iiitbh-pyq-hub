@@ -78,6 +78,16 @@ export default function Navbar() {
             Mentors
           </NavLink>
 
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLScj7otKxTp8ihEho8GlRCrqyTuQ5Ow12KNPvxj3YBsLaodadQ/viewform?usp=dialog"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-muted hover:text-ink transition-colors"
+          >
+            Feedback
+          </a>
+
+
         </nav>
 
         {/* Right Side */}
@@ -160,6 +170,15 @@ export default function Navbar() {
             >
               Mentors
             </NavLink>
+
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLScj7otKxTp8ihEho8GlRCrqyTuQ5Ow12KNPvxj3YBsLaodadQ/viewform?usp=dialog"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-3 py-2 rounded-lg text-muted hover:bg-surface-2 hover:text-ink transition-colors"
+            >
+              Feedback
+            </a>
 
           </nav>
         </div>
