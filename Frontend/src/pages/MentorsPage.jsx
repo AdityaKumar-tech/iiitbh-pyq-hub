@@ -8,28 +8,13 @@ import MentorGrid from "../components/MentorGrid";
 import Footer from "../components/Footer";
 
 const SAMPLE_MENTORS = [
-  {
-    id: "1",
-    name: "Ankit Sharma",
-    linkedin: "https://linkedin.com/in/ankitsharma",
-    specialty: "Competitive Programming & DSA Interview Prep",
-  },
-  {
-    id: "2",
-    name: "Priya Verma",
-    linkedin: "https://linkedin.com/in/priyaverma",
-  },
-  {
-    id: "3",
-    name: "Rohit Kumar",
-    linkedin: "https://linkedin.com/in/rohitkumar",
-    specialty: "Web Development & Open Source",
-  },
-  {
-    id: "4",
-    name: "Sneha Gupta",
-    linkedin: "https://linkedin.com/in/snehagupta",
-  },
+  // {
+  //   id: "1",
+  //   name: "Ankit Sharma",
+  //   linkedin: "https://linkedin.com/in/ankitsharma",
+  //   specialty: "Competitive Programming & DSA Interview Prep", // optional
+  // },
+  
 ];
 
 export default function MentorsPage() {
