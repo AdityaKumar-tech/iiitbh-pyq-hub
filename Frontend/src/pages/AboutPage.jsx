@@ -65,11 +65,11 @@ const team = [
     initials: "AN",
   },
   {
-    name: "Open Seat",
-    role: "Looking for a Designer",
-    bio: "Adhyaay is still small — if you care about UI/UX, this could be your seat.",
-    linkedin: null,
-    initials: "?",
+    name: "Aditya Kumar",
+    role: "Mern Stack Developer",
+    bio: "Collaborated with my team to build this application for the students of IIIT Bhagalpur to make their life easier.",
+    linkedin: "https://www.linkedin.com/in/aditya-kumar-921049382",
+    initials: "AK",
   },
   {
     name: "Open Seat",
