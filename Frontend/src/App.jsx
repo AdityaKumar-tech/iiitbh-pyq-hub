@@ -1,4 +1,4 @@
-// src/App.jsx — routing addition
+// src/App.jsx
 import { Routes, Route } from "react-router-dom";
 import LandingPage from "./pages/LandingPage";
 import ResourcesSemesterPage from "./pages/ResourcesSemesterPage";
@@ -8,19 +8,24 @@ import MentorsPage from "./pages/MentorsPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import AboutPage from "./pages/AboutPage";
 
+import ScrollToTop from "./components/ScrollToTop";
+
 export default function App() {
   return (
-    <Routes>
-      <Route path="/" element={<LandingPage />} />
-      <Route path="/resources" element={<ResourcesSemesterPage />} />
-      <Route path="/resources/:semesterId" element={<SubjectSelectionPage />} />
-      <Route
-        path="/resources/:semesterId/:subjectSlug"
-        element={<SubjectPage />}
-      />
-      <Route path="/mentors" element={<MentorsPage />} />
-      <Route path="/about" element={<AboutPage />} />
-      <Route path="*" element={<NotFoundPage />} />
-    </Routes>
+    <>
+      <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/resources" element={<ResourcesSemesterPage />} />
+        <Route path="/resources/:semesterId" element={<SubjectSelectionPage />} />
+        <Route
+          path="/resources/:semesterId/:subjectSlug"
+          element={<SubjectPage />}
+        />
+        <Route path="/mentors" element={<MentorsPage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="*" element={<NotFoundPage />} />
+      </Routes>
+    </>
   );
 }
