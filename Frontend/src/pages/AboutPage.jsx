@@ -107,9 +107,6 @@ const values = [
 
 // ──────────────────────────────────────────────────────────────
 //  LEADS DATA
-//  Replace placeholder values with actual details.
-//  photoUrl: paste the Google Drive sharing link for each lead's
-//            photo — the helper above converts it automatically.
 // ──────────────────────────────────────────────────────────────
 const leads = [
   {
@@ -137,7 +134,7 @@ const leads = [
     photoUrl: "https://drive.google.com/open?id=1PaONYynqx-KAHmfo8POy-R7_zhmwRepG",
   },
   {
-    // For the missing lead, you can leave the fields empty or null. The UI will show a placeholder.
+    // Missing Lead
     name: "Open Seat",
     branch: null,
     year: null,
