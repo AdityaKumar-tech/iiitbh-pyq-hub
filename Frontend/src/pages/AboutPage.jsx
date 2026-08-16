@@ -12,6 +12,8 @@ import {
   MessageCircle,
   Sparkles,
   Mail,
+  GraduationCap,
+  Briefcase,
 } from "lucide-react";
 
 import Navbar from "../components/Navbar";
@@ -35,6 +37,53 @@ function GithubIcon({ size = 16, className = "" }) {
   );
 }
 
+// LinkedIn inline SVG for the connect button
+function LinkedInIcon({ size = 14, className = "" }) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      className={className}
+      aria-hidden="true"
+    >
+      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+    </svg>
+  );
+}
+
+/**
+ * Converts a Google Drive sharing URL to a direct-embeddable thumbnail URL.
+ * Supports formats:
+ *   - https://drive.google.com/open?id=FILE_ID
+ *   - https://drive.google.com/file/d/FILE_ID/view...
+ *   - https://drive.google.com/uc?id=FILE_ID
+ *   - raw FILE_ID string
+ *
+ * Returns a thumbnail URL like:
+ *   https://drive.google.com/thumbnail?id=FILE_ID&sz=w400
+ */
+function getGDriveThumbnail(url, size = 400) {
+  if (!url) return null;
+
+  let fileId = url;
+
+  // Extract ID from /open?id=...
+  const openMatch = url.match(/[?&]id=([a-zA-Z0-9_-]+)/);
+  if (openMatch) {
+    fileId = openMatch[1];
+  }
+
+  // Extract ID from /file/d/.../
+  const fileMatch = url.match(/\/file\/d\/([a-zA-Z0-9_-]+)/);
+  if (fileMatch) {
+    fileId = fileMatch[1];
+  }
+
+  return `https://drive.google.com/thumbnail?id=${fileId}&sz=w${size}`;
+}
+
 const values = [
   {
     icon: Compass,
@@ -56,27 +105,45 @@ const values = [
   },
 ];
 
-const team = [
+// ──────────────────────────────────────────────────────────────
+//  LEADS DATA
+//  Replace placeholder values with actual details.
+//  photoUrl: paste the Google Drive sharing link for each lead's
+//            photo — the helper above converts it automatically.
+// ──────────────────────────────────────────────────────────────
+const leads = [
   {
-    name: "Anumanya",
-    role: "Mern Stack Developer",
-    bio: "Builded this application in the guidance of my seniors so that it should be useful for everyone",
-    linkedin: "https://www.linkedin.com/in/anumanya-jaiswal-67750537a/",
-    initials: "AN",
+    name: "Twinkle kumari",
+    branch: "CSE",
+    year: "3rd Year",
+    linkedin: "https://www.linkedin.com/in/twinkle-kumari-b09306325",
+    speciality: "Adhyaay GS | Web Developer | DSA C++ | Sports",
+    photoUrl: "https://drive.google.com/open?id=1hdlwK5Bnb0qT7-LLaYRBlVZ8XPw8WCsI",
   },
   {
-    name: "Aditya Kumar",
-    role: "Mern Stack Developer",
-    bio: "Collaborated with my team to build this application for the students of IIIT Bhagalpur to make their life easier.",
-    linkedin: "https://www.linkedin.com/in/aditya-kumar-921049382",
-    initials: "AK",
+    name: "Rudra Narayan Chaturvedi ",
+    branch: "CSE",
+    year: "3rd Year",
+    linkedin: "https://www.linkedin.com/in/rudra-narayan-chaturvedi-b91160328",
+    speciality: "Adhyaay Coordinator | Interested in Backend development",
+    photoUrl: "https://drive.google.com/open?id=1TGdhcLeWn37fERG16-1-p0yGlJkgx5FY",
   },
   {
+    name: "Aakanksha",
+    branch: "CSE",
+    year: "3rd Year",
+    linkedin: "https://www.linkedin.com/in/aakanksha-5b4494358",
+    speciality: "Currently working on DSA along with Web Development and right now I am a strategy lead in Adhyaay",
+    photoUrl: "https://drive.google.com/open?id=1PaONYynqx-KAHmfo8POy-R7_zhmwRepG",
+  },
+  {
+    // For the missing lead, you can leave the fields empty or null. The UI will show a placeholder.
     name: "Open Seat",
-    role: "Looking for a Contributor",
-    bio: "Content curation, backend help, or campus outreach — there's room for you here.",
+    branch: null,
+    year: null,
     linkedin: null,
-    initials: "?",
+    speciality: "Looking for a Contributor",
+    photoUrl: null,
   },
 ];
 
@@ -235,7 +302,7 @@ export default function AboutPage() {
             </div>
           </section>
 
-          {/* ================= THE TEAM ================= */}
+          {/* ================= THE LEADS ================= */}
           <section className="max-w-6xl mx-auto px-5 sm:px-6 py-10 sm:py-16">
             <motion.div
               initial={{ opacity: 0, y: 16 }}
@@ -249,74 +316,132 @@ export default function AboutPage() {
               </div>
               <div>
                 <h2 className="text-xl sm:text-2xl font-bold tracking-tight">
-                  The Team
+                  The Leads
                 </h2>
                 <p className="text-xs sm:text-sm text-muted mt-0.5">
-                  Small on purpose — growing with every contributor
+                  The people steering Adhyaay forward
                 </p>
               </div>
             </motion.div>
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
-              {team.map((member, i) => (
-                <motion.div
-                  key={member.name + i}
-                  initial={{ opacity: 0, y: 16 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-40px" }}
-                  transition={{ duration: 0.35, delay: i * 0.08 }}
-                  className={`rounded-card border p-5 sm:p-6 shadow-rest transition-all duration-300 ${
-                    member.linkedin
-                      ? "bg-surface border-line hover:shadow-hover hover:-translate-y-0.5"
-                      : "bg-surface-2/60 border-dashed border-line"
-                  }`}
-                >
-                  <div className="flex items-center gap-3.5">
-                    <div
-                      className={`w-12 h-12 rounded-full flex items-center justify-center text-sm font-bold shrink-0 ${
-                        member.linkedin
-                          ? "bg-primary/10 text-primary"
-                          : "bg-surface-2 text-muted border border-dashed border-line"
-                      }`}
-                    >
-                      {member.initials}
-                    </div>
-                    <div className="min-w-0">
-                      <p className="font-semibold text-ink truncate">
-                        {member.name}
-                      </p>
-                      <p className="text-xs text-secondary font-medium mt-0.5">
-                        {member.role}
-                      </p>
-                    </div>
-                  </div>
+              {leads.map((lead, i) => {
+                const isOpenSeat = !lead.linkedin;
+                const thumbnail = getGDriveThumbnail(lead.photoUrl);
 
-                  <p className="mt-4 text-xs sm:text-sm text-muted leading-relaxed">
-                    {member.bio}
-                  </p>
+                return (
+                  <motion.div
+                    key={lead.name + i}
+                    initial={{ opacity: 0, y: 16 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-40px" }}
+                    transition={{ duration: 0.35, delay: i * 0.08 }}
+                    className={`rounded-card border p-5 sm:p-6 shadow-rest transition-all duration-300 ${
+                      !isOpenSeat
+                        ? "bg-surface border-line hover:shadow-hover hover:-translate-y-0.5"
+                        : "bg-surface-2/60 border-dashed border-line"
+                    }`}
+                  >
+                    {/* ── Photo + Identity ── */}
+                    <div className="flex items-center gap-3.5">
+                      {thumbnail ? (
+                        <img
+                          src={thumbnail}
+                          alt={lead.name}
+                          className="w-14 h-14 rounded-full object-cover border-2 border-primary/20 shrink-0"
+                          referrerPolicy="no-referrer"
+                          onError={(e) => {
+                            // Fallback to initials if GDrive image fails
+                            e.target.style.display = "none";
+                            e.target.nextElementSibling.style.display = "flex";
+                          }}
+                        />
+                      ) : null}
 
-                  {member.linkedin ? (
-                    <a
-                      href={member.linkedin}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label={`${member.name} on LinkedIn`}
-                      className="mt-4 inline-flex items-center gap-1.5 text-xs font-semibold text-primary hover:text-primary-light transition-colors"
-                    >
-                      
-                      Connect
-                    </a>
-                  ) : (
-                    <Link
-                      to="/about#contribute"
-                      className="mt-4 inline-flex items-center gap-1.5 text-xs font-semibold text-secondary hover:text-secondary-light transition-colors"
-                    >
-                      <Mail size={13} />
-                      This could be you
-                    </Link>
-                  )}
-                </motion.div>
-              ))}
+                      {/* Initials fallback (hidden when photo loads, visible when no photo) */}
+                      <div
+                        className={`w-14 h-14 rounded-full items-center justify-center text-sm font-bold shrink-0 ${
+                          !isOpenSeat
+                            ? "bg-primary/10 text-primary"
+                            : "bg-surface-2 text-muted border border-dashed border-line"
+                        }`}
+                        style={{ display: thumbnail ? "none" : "flex" }}
+                      >
+                        {isOpenSeat
+                          ? "?"
+                          : lead.name
+                              .split(" ")
+                              .map((n) => n[0])
+                              .join("")
+                              .toUpperCase()
+                              .slice(0, 2)}
+                      </div>
+
+                      <div className="min-w-0">
+                        <p className="font-semibold text-ink truncate">
+                          {lead.name}
+                        </p>
+
+                        {/* Branch & Year badges */}
+                        {lead.branch && lead.year ? (
+                          <div className="flex items-center gap-1.5 mt-1 flex-wrap">
+                            <span className="inline-flex items-center gap-1 rounded-full bg-secondary/10 px-2 py-0.5 text-[10px] sm:text-xs font-medium text-secondary">
+                              <GraduationCap size={11} />
+                              {lead.branch}
+                            </span>
+                            <span className="inline-flex items-center rounded-full bg-primary/10 px-2 py-0.5 text-[10px] sm:text-xs font-medium text-primary">
+                              {lead.year}
+                            </span>
+                          </div>
+                        ) : (
+                          <p className="text-xs text-secondary font-medium mt-0.5">
+                            {lead.speciality}
+                          </p>
+                        )}
+                      </div>
+                    </div>
+
+                    {/* ── Speciality / Area of Interest ── */}
+                    {!isOpenSeat && lead.speciality && (
+                      <div className="mt-4 flex items-center gap-1.5">
+                        <Briefcase size={13} className="text-muted shrink-0" />
+                        <p className="text-xs sm:text-sm text-muted leading-relaxed">
+                          {lead.speciality}
+                        </p>
+                      </div>
+                    )}
+
+                    {/* ── LinkedIn / CTA ── */}
+                    {!isOpenSeat ? (
+                      <a
+                        href={lead.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`${lead.name} on LinkedIn`}
+                        className="mt-4 inline-flex items-center gap-1.5 text-xs font-semibold text-primary hover:text-primary-light transition-colors"
+                      >
+                        <LinkedInIcon size={13} />
+                        Connect on LinkedIn
+                      </a>
+                    ) : (
+                      <p className="mt-4 text-xs sm:text-sm text-muted leading-relaxed">
+                        Content curation, backend help, or campus outreach —
+                        there's room for you here.
+                      </p>
+                    )}
+
+                    {isOpenSeat && (
+                      <Link
+                        to="/about#contribute"
+                        className="mt-3 inline-flex items-center gap-1.5 text-xs font-semibold text-secondary hover:text-secondary-light transition-colors"
+                      >
+                        <Mail size={13} />
+                        This could be you
+                      </Link>
+                    )}
+                  </motion.div>
+                );
+              })}
             </div>
           </section>
 
