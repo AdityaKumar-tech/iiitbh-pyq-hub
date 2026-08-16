@@ -7,15 +7,29 @@ import PageHeader from "../components/PageHeader";
 import MentorGrid from "../components/MentorGrid";
 import Footer from "../components/Footer";
 
-const SAMPLE_MENTORS = [
-  // {
-  //   id: "1",
-  //   name: "Ankit Sharma",
-  //   linkedin: "https://linkedin.com/in/ankitsharma",
-  //   specialty: "Competitive Programming & DSA Interview Prep", // optional
-  // },
-  
-];
+import mentorData from "../data/mentors-data.json";
+
+
+function getGDriveThumbnail(url, size = 400) {
+  if (!url) return null;
+
+  let fileId = url;
+
+  // Extract ID from /open?id=...
+  const openMatch = url.match(/[?&]id=([a-zA-Z0-9_-]+)/);
+  if (openMatch) {
+    fileId = openMatch[1];
+  }
+
+  // Extract ID from /file/d/.../
+  const fileMatch = url.match(/\/file\/d\/([a-zA-Z0-9_-]+)/);
+  if (fileMatch) {
+    fileId = fileMatch[1];
+  }
+
+  return `https://drive.google.com/thumbnail?id=${fileId}&sz=w${size}`;
+}
+
 
 export default function MentorsPage() {
   const [mentors, setMentors] = useState([]);
@@ -32,7 +46,11 @@ export default function MentorsPage() {
         await new Promise((resolve) => setTimeout(resolve, 500));
 
         if (!cancelled) {
-          setMentors(SAMPLE_MENTORS);
+          const processed = mentorData.map((m) => ({
+            ...m,
+            image: getGDriveThumbnail(m.photoUrl),
+          }));
+          setMentors(processed);
           setStatus("success");
         }
 

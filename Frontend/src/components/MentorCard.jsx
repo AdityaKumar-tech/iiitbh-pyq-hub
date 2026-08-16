@@ -1,5 +1,4 @@
-// src/components/MentorCard.jsx
-
+import { useState } from "react";
 import { Sparkles, ArrowUpRight, Award } from "lucide-react";
 
 function LinkedinIcon(props) {
@@ -11,29 +10,44 @@ function LinkedinIcon(props) {
 }
 
 export default function MentorCard({ mentor }) {
-  // Extract initials for fallback avatar
+  const [imgError, setImgError] = useState(false);
+
+  // Initials from first letter of first two words (e.g. "Ananya Sharma" -> "AS")
   const initials = mentor?.name
     ? mentor.name
-        .split(" ")
+        .trim()
+        .split(/\s+/)
         .map((w) => w[0])
         .slice(0, 2)
         .join("")
+        .toUpperCase()
     : "M";
+
+  const photoSrc = mentor.image || mentor.avatar;
+  const showImage = photoSrc && !imgError;
+
+  const subtitleParts = [];
+  if (mentor.role || mentor.title) {
+    subtitleParts.push(mentor.role || mentor.title);
+  } else {
+    if (mentor.branch) subtitleParts.push(mentor.branch);
+    if (mentor.year) subtitleParts.push(mentor.year);
+  }
+  const subtitle = subtitleParts.length > 0 ? subtitleParts.join(" • ") : "Academic Mentor";
 
   return (
     <div className="group relative overflow-hidden rounded-card border border-line/80 bg-surface p-5 shadow-rest transition-all duration-300 hover:shadow-hover hover:-translate-y-1 hover:border-primary/30 flex flex-col justify-between">
-      {/* Background Decorative Ambient Gradient */}
       <div className="absolute top-0 right-0 -mt-6 -mr-6 h-24 w-24 rounded-full bg-primary/5 blur-2xl group-hover:bg-primary/10 transition-colors duration-300 pointer-events-none" />
 
       <div>
-        {/* Top Header Section */}
         <div className="flex items-start justify-between gap-3">
           <div className="flex items-center gap-3.5 min-w-0">
-            {/* Avatar / Image Handler */}
-            {mentor.image || mentor.avatar ? (
+            {showImage ? (
               <img
-                src={mentor.image || mentor.avatar}
+                src={photoSrc}
                 alt={mentor.name}
+                referrerPolicy="no-referrer"
+                onError={() => setImgError(true)}
                 className="w-12 h-12 shrink-0 rounded-full object-cover border border-line ring-2 ring-surface shadow-sm group-hover:scale-105 transition-transform duration-300"
               />
             ) : (
@@ -42,18 +56,16 @@ export default function MentorCard({ mentor }) {
               </div>
             )}
 
-            {/* Name & Role */}
             <div className="min-w-0">
               <h4 className="text-[15px] font-bold text-ink truncate group-hover:text-primary transition-colors duration-200">
                 {mentor.name}
               </h4>
               <p className="text-xs text-muted/90 truncate font-medium mt-0.5">
-                {mentor.role || mentor.title || "Academic Mentor"}
+                {subtitle}
               </p>
             </div>
           </div>
 
-          {/* Optional Badge / Level Tag */}
           {mentor.tag && (
             <span className="shrink-0 text-[10px] font-semibold tracking-wider uppercase px-2 py-0.5 rounded-full bg-secondary/10 text-secondary border border-secondary/20">
               {mentor.tag}
@@ -61,14 +73,10 @@ export default function MentorCard({ mentor }) {
           )}
         </div>
 
-        {/* Specialty / Bio Section */}
         {mentor.specialty && (
           <div className="mt-4 pt-3.5 border-t border-line/60">
             <div className="flex items-start gap-2">
-              <Sparkles
-                size={14}
-                className="text-secondary shrink-0 mt-0.5"
-              />
+              <Sparkles size={14} className="text-secondary shrink-0 mt-0.5" />
               <p className="text-xs text-muted leading-relaxed line-clamp-2">
                 {mentor.specialty}
               </p>
@@ -77,7 +85,6 @@ export default function MentorCard({ mentor }) {
         )}
       </div>
 
-      {/* Footer Links & Actions */}
       <div className="mt-5 pt-3 border-t border-line/40 flex items-center justify-between text-xs">
         {mentor.linkedin ? (
           <a

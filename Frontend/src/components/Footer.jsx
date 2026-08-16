@@ -47,10 +47,8 @@ const exploreLinks = [
 ];
 
 const resourceLinks = [
-  { to: "/resources/notes", label: "Notes" },
-  { to: "/resources/papers", label: "Previous year papers" },
-  { to: "/resources/labs", label: "Lab manuals" },
-  { to: "/resources/assignments", label: "Assignments" },
+  { to: "/resources", label: "Notes" },
+  { to: "/resources", label: "Previous year papers" },
 ];
 
 export default function Footer() {
