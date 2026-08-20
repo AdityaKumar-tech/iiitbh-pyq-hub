@@ -155,7 +155,7 @@ const leads = [
     year: "2nd Year",
     linkedin: "https://www.linkedin.com/in/ekta-aakriti-bb341b338",
     speciality: "Adhyaay Girl's Nominee | JS - PR Unnati | CP | PyC Club member | Exploring AI-ML | Python |Learning CP and DSA",
-    photoUrl: "https://res.cloudinary.com/dtz0urit6/image/upload/q_auto:best,f_jpg/cloudinary-tools-uploads/jalaf5tjtnnugrij5cgw",
+    photoUrl: "https://drive.google.com/open?id=1s_O5NtYnigE2_a98BDMixaYyUgUKu8Ki",
   },
 ];
 
