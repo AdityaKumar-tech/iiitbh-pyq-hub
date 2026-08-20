@@ -134,13 +134,28 @@ const leads = [
     photoUrl: "https://drive.google.com/open?id=1PaONYynqx-KAHmfo8POy-R7_zhmwRepG",
   },
   {
-    // Missing Lead
-    name: "Open Seat",
-    branch: null,
-    year: null,
-    linkedin: null,
-    speciality: "Looking for a Contributor",
-    photoUrl: null,
+    name: "Vansh Gupta",
+    branch: "ECE",
+    year: "3rd Year",
+    linkedin: "https://www.linkedin.com/in/vansh-gupta9801",
+    speciality: "DSA | CP | Web Dev | Google Cloud | Sponsorship Co Lead Enyugma | TEDx Operations Lead | Adhyaay Executive Coordinator ",
+    photoUrl: "https://drive.google.com/open?id=1mbhHYuYOjJlIjdF5GJlYntd9pAatXXVi",
+  },
+  {
+    name: "Priyam Kumar De",
+    branch: "MNC",
+    year: "2nd Year",
+    linkedin: "http://www.linkedin.com/in/priyam-kumar-de-435511302",
+    speciality: "AIC Club Member | Member of Netritva,Unnati Society | ML | DL | Adhyaay Nominee",
+    photoUrl: "https://drive.google.com/open?id=1506gsfnZoSS83n_HRABpw4OJ795Puinx",
+  },
+  {
+    name: "Ekta Aakriti",
+    branch: "CSE",
+    year: "2nd Year",
+    linkedin: "https://www.linkedin.com/in/ekta-aakriti-bb341b338",
+    speciality: "Adhyaay Girl's Nominee | JS - PR Unnati | CP | PyC Club member | Exploring AI-ML | Python |Learning CP and DSA",
+    photoUrl: "https://drive.google.com/open?id=1s_O5NtYnigE2_a98BDMixaYyUgUKu8Ki",
   },
 ];
 
@@ -313,7 +328,7 @@ export default function AboutPage() {
               </div>
               <div>
                 <h2 className="text-xl sm:text-2xl font-bold tracking-tight">
-                  The Leads
+                  The Leads and Nominees
                 </h2>
                 <p className="text-xs sm:text-sm text-muted mt-0.5">
                   The people steering Adhyaay forward
