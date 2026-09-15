@@ -1,58 +1,274 @@
 [
-  {
-    "name": "Aarav Sharma",
-    "branch": "Computer Science and Engineering",
+    {
+    "name": "Anumanya Jaiswal",
+    "branch": "CSE",
     "year": "2nd Year",
-    "linkedin": "https://www.linkedin.com/in/aarav-sharma/",
-    "specialty": "Approach me for Competitive Programming, DSA, and Backend Development."
+    "linkedin": "https://www.linkedin.com/in/anumanya-jaiswal-67750537a",
+    "specialty": "DevC core member | Interested in web development | Doing DSA side by side",
+    "photoUrl": "https://drive.google.com/open?id=1yod_SpsgrBMdumkJCORh7m4syAZ27bgI"
+  },
+    {
+    "name": "Aditya Kumar",
+    "branch": "CSE",
+    "year": "2nd Year",
+    "linkedin": "https://www.linkedin.com/in/aditya-kumar-921049382",
+    "specialty": "Web Development",
+    "photoUrl": "https://drive.google.com/open?id=17rlz60S-B6R019_6NEr9JnSiH2jM_QMo"
+  },
+    {
+    "name": "Aditya Singh",
+    "branch": "CSE",
+    "year": "2nd Year",
+    "linkedin": "https://www.linkedin.com/in/aditya-singh-bbb66540b",
+    "specialty": "Adhyaay Tech Team Member | MERN Stack | Improving DSA and CP",
+    "photoUrl": "https://drive.google.com/open?id=1xg3_uODLGadXVnk2aQfw1mF39YSueSpP"
   },
   {
-    "name": "Priya Verma",
-    "branch": "Information Technology",
+    "name": "Divya Raj",
+    "branch": "MNC",
     "year": "2nd Year",
-    "linkedin": "https://www.linkedin.com/in/priya-verma/",
-    "specialty": "Approach me for Frontend Development, UI/UX Design, and Hackathon guidance."
+    "linkedin": "https://www.linkedin.com/in/divya-raj-238073328",
+    "specialty": "Interested in Web Dev | Studying DSA | Competitive Programming",
+    "photoUrl": "https://drive.google.com/open?id=16MkgovO2O_smLPytt7hBmOaTPc4bxN3w"
   },
   {
-    "name": "Rohan Gupta",
-    "branch": "Electronics and Communication Engineering",
+    "name": "Bhavya Bharti",
+    "branch": "CSE",
     "year": "2nd Year",
-    "linkedin": "https://www.linkedin.com/in/rohan-gupta/",
-    "specialty": "Approach me for Embedded Systems, IoT projects, and Core Placements."
+    "linkedin": "https://www.linkedin.com/in/bhavya-bharti-550051379",
+    "specialty": "Coding and Competitive Programming (CP) | Also interested in AI/ML, currently learning ML concepts and applications",
+    "photoUrl": "https://drive.google.com/open?id=1k0PGmZEW9peK7wYFRSrrT2A4aaVTnT32"
   },
   {
-    "name": "Sneha Iyer",
+    "name": "Saurya Jaiswal",
     "branch": "MAE",
     "year": "2nd Year",
-    "linkedin": "https://www.linkedin.com/in/sneha-iyer/",
-    "specialty": "Approach me for Machine Learning, Data Science, and Research opportunities."
+    "linkedin": "https://www.linkedin.com/in/saurya-jaiswal-10634841a",
+    "specialty": "Passionate about DSA and problem solving | Loves competitive programming",
+    "photoUrl": "https://drive.google.com/open?id=1kpDSC2JXppzvDsW15z2t2-ZaB7z1DpW_"
   },
   {
-    "name": "Karan Mehta",
-    "branch": "CSE",
+    "name": "Koushik Kumar Sahu",
+    "branch": "MAE",
     "year": "2nd Year",
-    "linkedin": "https://www.linkedin.com/in/karan-mehta/",
-    "specialty": "Approach me for Cloud Computing, DevOps, and Open Source contributions."
+    "linkedin": "https://www.linkedin.com/in/koushikkrsahu20",
+    "specialty": "Currently working on DSA alongside semester exams",
+    "photoUrl": "https://drive.google.com/open?id=1FfSNqhG49B0YWnX7hd5inTtgCO2ZZ3dU"
   },
   {
-    "name": "Ananya Singh",
-    "branch": "CSE",
-    "year": "2nd Year",
-    "linkedin": "https://www.linkedin.com/in/ananya-singh/",
-    "specialty": "Approach me for App Development, React Native, and System Design."
-  },
-  {
-    "name": "Rahul Nair",
-    "branch": "Computer Science and Engineering",
-    "year": "2nd Year",
-    "linkedin": "https://www.linkedin.com/in/rahul-nair/",
-    "specialty": "Approach me for Cybersecurity, Blockchain, and Tech Placements."
-  },
-  {
-    "name": "Neha Patel",
+    "name": "Suraj Kumar Yadav",
     "branch": "ECE",
     "year": "2nd Year",
-    "linkedin": "https://www.linkedin.com/in/neha-patel/",
-    "specialty": "Approach me for VLSI Design, Signal Processing, and Higher Studies advice."
+    "linkedin": "https://www.linkedin.com/in/suraj-kumar-126a7a389",
+    "specialty": "Unnati Member | VLSI & Digital Electronics Enthusiast | Currently learning DSA in C++",
+    "photoUrl": "https://drive.google.com/open?id=1SbGfEL6MMmMu_YmvBO6yEk0nAgeCBwk0"
+  },
+  {
+    "name": "Srinjoy Das",
+    "branch": "MAE",
+    "year": "2nd Year",
+    "linkedin": "https://www.linkedin.com/in/srinjoy-das-crunchy",
+    "specialty": "PyC Club | WebDev (upto React) | Python | Interested in ML | Continuing CP | Started DSA | Solidworks | GameDev",
+    "photoUrl": "https://drive.google.com/open?id=1KUCn1n53vuT3_tNhBR1gEaZDuHIH5MW4"
+  },
+  {
+    "name": "Aditi Gupta",
+    "branch": "MNC",
+    "year": "2nd Year",
+    "linkedin": "https://www.linkedin.com/in/aditi-gupta-6702a136b",
+    "specialty": "PyC Lead & DevC Club Member | Working on Frontend Development | CP and DSA",
+    "photoUrl": "https://drive.google.com/open?id=1ygMU1xOgSXX0WMiz_yvZksr7luxhynPY"
+  },
+  {
+    "name": "Akshat",
+    "branch": "ECE",
+    "year": "2nd Year",
+    "linkedin": "https://www.linkedin.com/in/akshat-rawat-1386b6382",
+    "specialty": "CP / Backend",
+    "photoUrl": "https://drive.google.com/open?id=1XvNRZJQ04EX0S9SnVZzs3zvZAf6z6x_l"
+  },
+  {
+    "name": "Nidhi Khokhar",
+    "branch": "ECE",
+    "year": "2nd Year",
+    "linkedin": "https://www.linkedin.com/in/nidhi-khokhariiitbh",
+    "specialty": "CP | DSA | Web Dev",
+    "photoUrl": "https://drive.google.com/open?id=1i47khtonN8YV3XxeSWh1NA_b86UaQmm4"
+  },
+  {
+    "name": "Abdul Wahid",
+    "branch": "CSE",
+    "year": "2nd Year",
+    "linkedin": "https://www.linkedin.com/in/abdul-wahid-25b941381",
+    "specialty": "Currently working on CP and DSA | Good at chess | Active in Samwaad | Interested in web dev and full stack",
+    "photoUrl": "https://drive.google.com/open?id=14yyfMNyIdHhlQjmA-aRpDCD5By7IUPUR"
+  },
+  {
+    "name": "Mayank Raj Gupta",
+    "branch": "ECE",
+    "year": "2nd Year",
+    "linkedin": "https://www.linkedin.com/in/mayank-raj-gupta-57b540371",
+    "specialty": "CP | DSA | ML",
+    "photoUrl": "https://drive.google.com/open?id=19kM5kdl2Ju-wC49tTY5IkMFN9YZx7tZj"
+  },
+  {
+    "name": "Krishna Yadav",
+    "branch": "CSE",
+    "year": "2nd Year",
+    "linkedin": "https://www.linkedin.com/in/krishna-yadav-9152a1374",
+    "specialty": "Interested in AI-ML | Learning DSA and CP alongside",
+    "photoUrl": "https://drive.google.com/open?id=1I1WSrZmIfi-xcFI3gNu3EhPqk6FJ05Hs"
+  },
+  {
+    "name": "Chirag Raj",
+    "branch": "ECE",
+    "year": "2nd Year",
+    "linkedin": "https://www.linkedin.com/in/chirag-raj-27307337a",
+    "specialty": "Reflection Club Secretary | Interested in ECE core | Currently working on embedded systems",
+    "photoUrl": "https://drive.google.com/open?id=1smZ0IW0gykKXWXDklfb2gjIsLU9fl45o"
+  },
+  {
+    "name": "Utkarsh Yadav",
+    "branch": "CSE",
+    "year": "2nd Year",
+    "linkedin": "https://www.linkedin.com/in/utkarsh-yadav-0252b4375",
+    "specialty": "MERN Stack Development | Currently working on projects and competitive programming",
+    "photoUrl": "https://drive.google.com/open?id=1PGNnL4aYlsn9FTceONyrYx-ZCRxSaq54"
+  },
+  {
+    "name": "Himanshu Vishwakarma",
+    "branch": "CSE",
+    "year": "2nd Year",
+    "linkedin": "https://www.linkedin.com/in/himanshu-vishwakarma-651467367",
+    "specialty": "AI/ML Enthusiast | Strong interest in DSA and problem solving (CP) | Exploring AI engineering",
+    "photoUrl": "https://drive.google.com/open?id=1d4oM3JGyEgN5wshYEvS2Y1FHGAT4yMl2"
+  },
+  {
+    "name": "Piyush Mishra",
+    "branch": "CSE",
+    "year": "2nd Year",
+    "linkedin": "https://www.linkedin.com/in/piyush-mishra-95a494369",
+    "specialty": "CP | PyC Lead | Working on DSA and backend development",
+    "photoUrl": "https://drive.google.com/open?id=1dNAFezp_-930KdlLddM3gV4W1VgfSKNQ"
+  },
+  {
+    "name": "Santanu Pradhan",
+    "branch": "ECE",
+    "year": "2nd Year",
+    "linkedin": "https://www.linkedin.com/in/santanu-pradhan-952920379",
+    "specialty": "CP | DSA | ECE Core | Embedded Systems | PCB Design | REC Club Member",
+    "photoUrl": "https://drive.google.com/open?id=1-Eke4_MCQtykDdPM8_LYKSc7eG4TyN4d"
+  },
+  {
+    "name": "Shaswat Srivastava",
+    "branch": "CSE",
+    "year": "2nd Year",
+    "linkedin": "https://www.linkedin.com/in/shaswat-srivastava-3bb301224",
+    "specialty": "Web Development | Agentic AI | DSA/CP | Content Creation",
+    "photoUrl": "https://drive.google.com/open?id=15FmQqqNa7_AP0pSchACROwhZ2j-2XP0k"
+  },
+  {
+    "name": "Ankit Raj Singh",
+    "branch": "CSE",
+    "year": "2nd Year",
+    "linkedin": "https://www.linkedin.com/in/ankit-raj-singh-515428380",
+    "specialty": "C++ & DSA Enthusiast | Interested in Web Development | Currently working on DSA, CP & Full-Stack Development",
+    "photoUrl": "https://drive.google.com/open?id=151pv7Q-Ie4vffFPDH7e_Wds_ogKp8n2u"
+  },
+  {
+    "name": "Soni Kumari",
+    "branch": "CSE",
+    "year": "2nd Year",
+    "linkedin": "https://www.linkedin.com/in/soni-kumari-b86794382",
+    "specialty": "PyC Lead | CP | DSA | Frontend | Currently learning Backend",
+    "photoUrl": "https://drive.google.com/open?id=1wbcEbRVZEj1rN3h1Bru9gZrmx90LfSHx"
+  },
+  {
+    "name": "Akarsh Pandey",
+    "branch": "CSE",
+    "year": "2nd Year",
+    "linkedin": "https://www.linkedin.com/in/akarsh-pandey-iiit",
+    "specialty": "PyC Lead | Adhyaay Mentor | Interested in CP and DSA | Learning Web Development",
+    "photoUrl": "https://drive.google.com/open?id=1pO_Y0iS63EqZqQOePYX-sPGF7eBHancR"
+  },
+  {
+    "name": "Sandeep Kumar",
+    "branch": "CSE",
+    "year": "2nd Year",
+    "linkedin": "https://www.linkedin.com/in/sandeep-kumar-40182a389",
+    "specialty": "Interested in Web Development | Currently doing DSA and CP alongside",
+    "photoUrl": "https://drive.google.com/open?id=1NI_eoQZDs8cXUAsVGv36mEc_q24BEgCP"
+  },
+  {
+    "name": "Pranjal Prashar",
+    "branch": "CSE",
+    "year": "2nd Year",
+    "linkedin": "https://www.linkedin.com/in/pranjal-prashar-5b0b60380",
+    "specialty": "PyC Club Member | Currently doing Web Development | Focused on DSA & CP",
+    "photoUrl": "https://drive.google.com/open?id=11glNMpQZfII3RPuu0zro6sqmHVyiFPx4"
+  },
+  {
+    "name": "Govind Mishra",
+    "branch": "CSE",
+    "year": "2nd Year",
+    "linkedin": "https://www.linkedin.com/in/govind-mishra-932991411",
+    "specialty": "CP | DSA | Web Dev | Public Speaking",
+    "photoUrl": "https://drive.google.com/open?id=1HrTDJHN1IF0vSvQ-WXv8NJe93a7pBxW-"
+  },
+  {
+    "name": "Shashwat Lohani",
+    "branch": "MNC",
+    "year": "2nd Year",
+    "linkedin": "https://www.linkedin.com/in/shashwat-lohani-315aa0381",
+    "specialty": "Competitive Programming",
+    "photoUrl": "https://drive.google.com/open?id=1CdKpcFUoyuteeUMy3FoL25DCf-ZhNYg1"
+  },
+  {
+    "name": "Abhigyan Abhay",
+    "branch": "CSE",
+    "year": "2nd Year",
+    "linkedin": "https://www.linkedin.com/in/abhigyanabhay",
+    "specialty": "PyC and DevC Club Member | Interested in Web & Backend Development | Exploring Java & Spring Boot | Python | CP & DSA",
+    "photoUrl": "https://drive.google.com/open?id=1CsZM_hWj2zsma75e4KXYfCfgQOXruGxQ"
+  },
+  {
+    "name": "Saumya Kumari",
+    "branch": "ECE",
+    "year": "2nd Year",
+    "linkedin": "https://www.linkedin.com/in/saumya-kumari-02bb88382",
+    "specialty": "Interested in Web Development",
+    "photoUrl": "https://drive.google.com/open?id=1kiM76JcTAN6vKNZxJYQNHuIacNEEuUrV"
+  },
+  {
+    "name": "Anuj Kumar",
+    "branch": "CSE",
+    "year": "2nd Year",
+    "linkedin": "https://www.linkedin.com/in/anuj-kumar-2a08b2388",
+    "specialty": "AI/ML | DSA",
+    "photoUrl": "https://drive.google.com/open?id=11kgeR3tu8dWoRCQ0lRCGsarHGwTC9s2e"
+  },
+  {
+    "name": "Suraj Kumar",
+    "branch": "CSE",
+    "year": "3rd Year",
+    "linkedin": "https://www.linkedin.com/in/skg58",
+    "specialty": "Technical Lead at Adhyaay & Software Engineer (Contract) | Full Stack Development & Cloud Deployment | Building scalable Node.js/Next.js systems, DSA alongside",
+    "photoUrl": "https://drive.google.com/open?id=1GPD0IfDSwivsxfjRAEbdg_f8pG-HI715"
+  },
+  {
+    "name": "Deepak Anand",
+    "branch": "CSE",
+    "year": "2nd Year",
+    "linkedin": "https://www.linkedin.com/in/deepak-anand-916b25379",
+    "specialty": "ML | Interested in AI and advanced ML, DL, NN, Transformers, NLP, GenAI, RAG, Agentic AI, MLOps",
+    "photoUrl": "https://drive.google.com/open?id=1FifqLy8T2olrx3VzsPp0_0cdlpCdWrV3"
+  },
+  {
+    "name": "Ankit Kumar Gupta",
+    "branch": "CSE",
+    "year": "2nd Year",
+    "linkedin": "https://www.linkedin.com/in/ankit-kr-gupta-270bb3381",
+    "specialty": "Reflection Incharge | E-Cell Technical Lead | Unnati JS Technical | Interested in Web & App Development",
+    "photoUrl": "https://drive.google.com/open?id=1oh7Y7CrgtvlyMnUCndvfRHdXtTRpNeoY"
   }
 ]

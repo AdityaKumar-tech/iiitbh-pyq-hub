@@ -47,10 +47,8 @@ const exploreLinks = [
 ];
 
 const resourceLinks = [
-  { to: "/resources/notes", label: "Notes" },
-  { to: "/resources/papers", label: "Previous year papers" },
-  { to: "/resources/labs", label: "Lab manuals" },
-  { to: "/resources/assignments", label: "Assignments" },
+  { to: "/resources", label: "Notes" },
+  { to: "/resources", label: "Previous year papers" },
 ];
 
 export default function Footer() {
@@ -70,11 +68,7 @@ export default function Footer() {
           <div className="lg:col-span-5">
 
             <div className="flex items-center gap-4">
-              <div className="h-12 w-12 shrink-0 rounded-full border border-secondary/40 bg-primary flex items-center justify-center">
-                <span className="font-serif text-xl text-secondary-light leading-none">
-                  अ
-                </span>
-              </div>
+              <img src="/logo.png" alt="Adhyaay Logo" className="h-13 w-auto rounded-full object-cover dark:bg-white" />
               <div>
                 <h2 className="font-serif text-2xl text-ink tracking-tight">
                   Adhyaay
