@@ -106,6 +106,15 @@
           "branch": "mae"
         },
         {
+          "slug": "eng-mathematics",
+          "code": "",
+          "name": "ENG MATHEMATICS",
+          "folder_id": "1lRuC8XabAUtBCim670zfa8H8mb-bvjp6",
+          "pyqs_folder_id": "1UmHor6PK5oj7hJKVHIQ0xxiYQRkr5WNS",
+          "notes_folder_id": "1lI5_7xEOV1FOU-Og8o04u5lp378Jv1uD",
+          "branch": "mae"
+        },
+        {
           "slug": "eng-maths-1",
           "code": "",
           "name": "ENG MATHS 1",
@@ -222,12 +231,48 @@
           "branch": "cse"
         },
         {
+          "slug": "data-structure-and-algo",
+          "code": "",
+          "name": "DATA STRUCTURE AND ALGO",
+          "folder_id": "1L0Xnn1KBxeU2Ib8B1vwzLFXeew6i4-Sn",
+          "pyqs_folder_id": "1I2LAhygYLqo_VZGmKqM5okuzKrzXoz6q",
+          "notes_folder_id": "1OUue_cc4UHBVI0Oxf99mrOwKvIByBec9",
+          "branch": "mae"
+        },
+        {
           "slug": "data-structures",
           "code": "",
           "name": "DATA STRUCTURES",
           "folder_id": "1KUvjKfczMhQmllsxXDaiW6HTq3ERH6j9",
-          "pyqs_folder_id": "",
-          "notes_folder_id": "",
+          "pyqs_folder_id": "10sIOfK2a2GFniINKMhvEnlbFleecEWrD",
+          "notes_folder_id": "1pfBauqH8qahygMQ0dy8D5VKmAbwtYsOs",
+          "branch": "ece"
+        },
+        {
+          "slug": "data-structures-and-algorithm",
+          "code": "",
+          "name": "Data Structures and Algorithm",
+          "folder_id": "1ph9qWNRJuJ6XeO9fAQxI4Vfl7WjnUtmi",
+          "pyqs_folder_id": "1mww6PK55nhVvMZPnZIKBq2I1RhgvZce6",
+          "notes_folder_id": "1_vxcXrhhqtCzvx0yhqYwPyoQvTSZR4hZ",
+          "branch": "mnc"
+        },
+        {
+          "slug": "digital-design",
+          "code": "",
+          "name": "Digital Design",
+          "folder_id": "1hPTuInQ-XK8YZuGHprDBwpN1iyCbjXun",
+          "pyqs_folder_id": "1qvSjyRxMJxYLxJW37E16muJ8OiSxEh6O",
+          "notes_folder_id": "1eHR0pmi7w2sAcCfdVNf78VrsIdTmY00k",
+          "branch": "mnc"
+        },
+        {
+          "slug": "digital-design",
+          "code": "",
+          "name": "DIGITAL DESIGN",
+          "folder_id": "1nKqEpT8jdW0i0plR25GCz53JejwJTkxi",
+          "pyqs_folder_id": "1ywbTH2KMcJ1IFdqCAVcIcFuGU0v68u13",
+          "notes_folder_id": "1rw45saqueUaBXAmk3hXxfz-hw66DnJtl",
           "branch": "ece"
         },
         {
@@ -249,6 +294,69 @@
           "branch": "cse"
         },
         {
+          "slug": "digital-signal-processing",
+          "code": "",
+          "name": "DIGITAL SIGNAL PROCESSING ",
+          "folder_id": "1Iq8RRDvMX9sfJizQH4hIrZAjxwdueW31",
+          "pyqs_folder_id": "1SHltfAkbaWdRLIqJdUjPptAA5elEiGuq",
+          "notes_folder_id": "1wWyuwshledy98UP3NNpjkEqZTegux2bH",
+          "branch": "mnc"
+        },
+        {
+          "slug": "digital-signal-processing",
+          "code": "",
+          "name": "DIGITAL SIGNAL PROCESSING ",
+          "folder_id": "1Jd0h4AynGVw0zFqaFzF-U_wsCONkj4zu",
+          "pyqs_folder_id": "1DErcDAPrlUJ7iDKZTNvPlO-K6G6864HR",
+          "notes_folder_id": "1qBV8xCHZzGDFEx8e2ynN4oAstQqW1Rfq",
+          "branch": "ece"
+        },
+        {
+          "slug": "digital-systems",
+          "code": "",
+          "name": "DIGITAL SYSTEMS",
+          "folder_id": "1-Xm3trJzT2v3a-ckXxqcU6wNGmyILn6r",
+          "pyqs_folder_id": "1mXK_UjfLi9B18Qz6hqHO96ua2O2iCn0U",
+          "notes_folder_id": "1gNjO_HSaBE7_tB1kf2GB_FAnwt8yWsyp",
+          "branch": "mae"
+        },
+        {
+          "slug": "eng-maths-2",
+          "code": "",
+          "name": "ENG MATHS 2",
+          "folder_id": "1kcT4fSvShmgXXD0Cf28hlBr_pZ2IlGz9",
+          "pyqs_folder_id": "1kcVPukvjQj0uLstErN59l8wH7RoMzKr1",
+          "notes_folder_id": "1qPLqOhFxRnJv07dr6l5K6U-Afn71I1DA",
+          "branch": "mae"
+        },
+        {
+          "slug": "eng-mechanics",
+          "code": "",
+          "name": "ENG MECHANICS",
+          "folder_id": "1ikvG05rOn2FVjxOrm4b4v2Xrd5czXdBR",
+          "pyqs_folder_id": "1K-Oj3chLLF5npBUZvpWPaAy-ZmGE731O",
+          "notes_folder_id": "1lJTWyLBtttVsvlyv3-NZOjjzPQ1JDZMI",
+          "branch": "mae"
+        },
+        {
+          "slug": "mathematics-2",
+          "code": "",
+          "name": "Mathematics 2",
+          "folder_id": "1d1k8-UGpWDpBlMSgDS7iNU27wdx08OGm",
+          "pyqs_folder_id": "1wBc_KI5lA5_Y3UP3Hb1b6ucZ-ia16JAy",
+          "notes_folder_id": "1CB4e_1_nJy8r66VekPiTskjxIXPECRUh",
+          "branch": "mnc"
+        },
+        {
+          "slug": "mathematics-2",
+          "code": "",
+          "name": "MATHEMATICS 2",
+          "folder_id": "1O2cK7kSHrNCLAS0GOcj5wI2AF-R6WUDF",
+          "pyqs_folder_id": "",
+          "notes_folder_id": "1z4KY827L8NfnwjgL62DYeiYkfkksQNU6",
+          "branch": "ece"
+        },
+        {
           "slug": "maths-2",
           "code": "",
           "name": "MATHS -2",
@@ -256,6 +364,24 @@
           "pyqs_folder_id": "1-EMzzux5hvQREQb-blDmy9mP_9KScIDv",
           "notes_folder_id": "1TURAUajhoIBbSVNKZe6lxou_LaGD3gAp",
           "branch": "cse"
+        },
+        {
+          "slug": "semiconductor",
+          "code": "",
+          "name": "Semiconductor",
+          "folder_id": "1reue3HgBp_NyfdTT6lj9M2DGSl4V_KTI",
+          "pyqs_folder_id": "1RQxuYpE8UIZ2mqWY_AMg4lXzOuaxPTW-",
+          "notes_folder_id": "1c5DS3vPEWrikQpESpLmJiNz5Js1sZQEQ",
+          "branch": "mnc"
+        },
+        {
+          "slug": "semiconductor",
+          "code": "",
+          "name": "Semiconductor",
+          "folder_id": "1nnF1FEmuLkCsOODnhnumunr91pr5FF5L",
+          "pyqs_folder_id": "1slIlsX3itVPGAMXHzMlENQoB_oxO1sD6",
+          "notes_folder_id": "1UOxmJ_A6vvYd0-2XriB8jLZ23uzxkY7z",
+          "branch": "ece"
         }
       ]
     },
@@ -296,6 +422,15 @@
           "slug": "coa",
           "code": "",
           "name": "COA",
+          "folder_id": "1DpShWWWiZ2RkGitYfeTeTlRIHvntohsM",
+          "pyqs_folder_id": "1tdjKx2RVB0Mg5ifXnzRE2myjjnRguqi0",
+          "notes_folder_id": "1r4ueOxPXE-fGP3_7QU6LcwB6N8EBaWZU",
+          "branch": "mnc"
+        },
+        {
+          "slug": "coa",
+          "code": "",
+          "name": "COA",
           "folder_id": "1w9rhWv57Xm-EPugkvSUoTMilykfqSc4b",
           "pyqs_folder_id": "13GIq4tDoPp12w8i5ql4_F6Lixd1r4B07",
           "notes_folder_id": "1xCEHus4LaLVSpTICoKYXzdySYYth3FQs",
@@ -314,10 +449,28 @@
           "slug": "daa",
           "code": "",
           "name": "DAA",
+          "folder_id": "1Ibbnd9koUHYFhpAUlpPhjP2EjjeTHczp",
+          "pyqs_folder_id": "1R9ni9_iUtLtgKkLXf3_2KLfztyCzdVKi",
+          "notes_folder_id": "1TwBC82krcQISCWHF8RLcje4aQ9Y9HuAn",
+          "branch": "mnc"
+        },
+        {
+          "slug": "daa",
+          "code": "",
+          "name": "DAA",
           "folder_id": "1aaeRiid2atgLsWJEsLdDmiHke1MNnn56",
           "pyqs_folder_id": "1NKbusBT00rKSSPolxI75chwuCvD2IBtp",
           "notes_folder_id": "1X7JvG7xTIF37rttWyzcAYLBXvJ82Gz8L",
           "branch": "cse"
+        },
+        {
+          "slug": "discrete-mathematics",
+          "code": "",
+          "name": "Discrete Mathematics",
+          "folder_id": "1n8wWfjyeDpFPDakfeQ2kjaFnB_-EhMjK",
+          "pyqs_folder_id": "1HxGF-ZU_vl9zcwpMSAEdz0g5f_2DdkvS",
+          "notes_folder_id": "1jl0_GGK3UsG6H7DhNvzv_jOPR02UUEGj",
+          "branch": "mnc"
         },
         {
           "slug": "discrete-mathematics",
@@ -347,6 +500,24 @@
           "branch": "mae"
         },
         {
+          "slug": "iks",
+          "code": "",
+          "name": "iks",
+          "folder_id": "1ZzdQu_A92snt2OKH904XuSj-oc2QCm8_",
+          "pyqs_folder_id": "1zAW-CzBux2DDCiVGNeHh3PpO5QO4UHL1",
+          "notes_folder_id": "10nlrYvVS-dOw60NLHHobiWwOsz7dprHa",
+          "branch": "cse"
+        },
+        {
+          "slug": "iks",
+          "code": "",
+          "name": "IKS",
+          "folder_id": "1LGxZxNwaKTp7FqnV0tOE3IYscBiK-w_U",
+          "pyqs_folder_id": "",
+          "notes_folder_id": "1GfPKpxNlnTzWZdTiuJyNQGzX8wt64MOF",
+          "branch": "mnc"
+        },
+        {
           "slug": "maths-3",
           "code": "",
           "name": "MATHS-3",
@@ -372,6 +543,15 @@
           "pyqs_folder_id": "1gwuvPLDtMbpfmZnSlpvTXM_xurYnwGmj",
           "notes_folder_id": "1JqXLo2b0yMrSeLKvGvan1On-Nyx-Y6qY",
           "branch": "mae"
+        },
+        {
+          "slug": "oops",
+          "code": "",
+          "name": "OOPS",
+          "folder_id": "16bOQX3jsrGYufjirlDpaQD599orYaTKU",
+          "pyqs_folder_id": "1BW9me5q1n8w_OJ4SxdIR698qASTsaXvI",
+          "notes_folder_id": "1VePNcIXKFOdQVDTv1PgVliMpfEG9WJHp",
+          "branch": "mnc"
         },
         {
           "slug": "oops",
@@ -408,6 +588,15 @@
           "pyqs_folder_id": "1AntjWAT8T5e9oJEtH6x6Az-DhGLYaPXJ",
           "notes_folder_id": "1_7VIK0HoFZAOTm4nDGHw4ScqEBuNwoW5",
           "branch": "cse"
+        },
+        {
+          "slug": "probability-and-statistics",
+          "code": "",
+          "name": "Probability and Statistics",
+          "folder_id": "1SY-qv3ePj4JHBNnwYHF3qnNwhkNEyUeG",
+          "pyqs_folder_id": "",
+          "notes_folder_id": "1nRj80H7wKR2_J4lyc1FY4klD4oaeCzy9",
+          "branch": "mnc"
         },
         {
           "slug": "probability-statistics-and-random-process",
@@ -461,7 +650,134 @@
       "title": "Semester 4",
       "description": "Second year, Even Semester",
       "folder_id": "1zwb47LximneDRyaOkqMLADtBcQpwYKz1",
-      "subjects": []
+      "subjects": [
+        {
+          "slug": "dbms",
+          "code": "",
+          "name": " DBMS",
+          "folder_id": "1Pou2fIBvI6PiuUx2YAjtD63YM8bGg1v9",
+          "pyqs_folder_id": "1uBxTK1jgqZbiWb3scC2TQmD-cdd5UQO8",
+          "notes_folder_id": "1Vtgp-aTOH14Zgy4rJhy8LB4LOrDy_Lad",
+          "branch": "cse"
+        },
+        {
+          "slug": "ai",
+          "code": "",
+          "name": "AI",
+          "folder_id": "1UDpLxJOePALs_y_tC1sZmcgZJO-hg9ue",
+          "pyqs_folder_id": "1xjw1_2DTgu6LW6oWjxfyxE--c5XlhWoR",
+          "notes_folder_id": "1IbIbZZZ59ZBO6NItI36Pv-nykbIbG6ht",
+          "branch": "mnc"
+        },
+        {
+          "slug": "ai",
+          "code": "",
+          "name": "AI",
+          "folder_id": "1Dj25UNZB1-uAWxvbPEAXkEj5Y4k8AEYF",
+          "pyqs_folder_id": "1W19Z2BSGLv1_SFA2tM2tKnXOoFBtoaE-",
+          "notes_folder_id": "1ZpDSdghJmGRVwBxZRQbZDPkZIj-RpW9-",
+          "branch": "cse"
+        },
+        {
+          "slug": "dbms",
+          "code": "",
+          "name": "DBMS",
+          "folder_id": "1Xq1IbJEe-NC2-qq9ufNYDtSV7D_2LzJv",
+          "pyqs_folder_id": "1cjY95hcbHvOhWPI3NTUP7u-Xe0V0vsCc",
+          "notes_folder_id": "1rUfpuN_guCmgbmPkDgDQZ3UjlYqguCJ0",
+          "branch": "mnc"
+        },
+        {
+          "slug": "dsp",
+          "code": "",
+          "name": "DSP",
+          "folder_id": "12TUcic87NCNrQrL0925zcCCvECUko19G",
+          "pyqs_folder_id": "1_aA2hK_zHkyPWJWT39bcbEKlU7tJEZ3l",
+          "notes_folder_id": "1VxhPJ310qJonm-M1gxJfZe4VuJi88B50",
+          "branch": "mnc"
+        },
+        {
+          "slug": "dsp",
+          "code": "",
+          "name": "DSP",
+          "folder_id": "1fuijbiV4wCAtQHILMYAuF1sPar0AMZxT",
+          "pyqs_folder_id": "19Pj3WtHNhAYE9c0HXKwIMoIeBiNto4mN",
+          "notes_folder_id": "1bubTR-daWo9jNWvkD0Ccmqkhr2v8JNeM",
+          "branch": "cse"
+        },
+        {
+          "slug": "fla",
+          "code": "",
+          "name": "FLA",
+          "folder_id": "1kcA_VbpYz6x3bDixkz70h20tz9DBZXbo",
+          "pyqs_folder_id": "1e043avyoCDB1bKCU_wd-yvKejmoZ9OK5",
+          "notes_folder_id": "1QthXprJVdwstexm8cpjxV6n1UCPjC7RU",
+          "branch": "mnc"
+        },
+        {
+          "slug": "fla",
+          "code": "",
+          "name": "FLA",
+          "folder_id": "1oguJNErglW8jVhBi5yjhbmRsgs4W6sV9",
+          "pyqs_folder_id": "1wylPGd1cUCSJTmTwJOZi6KzMSLa2O3iQ",
+          "notes_folder_id": "1-QRpIPFVfyoW0IrY0josGXiDg7pVg_xC",
+          "branch": "cse"
+        },
+        {
+          "slug": "microprocessing-and-interface",
+          "code": "",
+          "name": "Microprocessing_and_interface",
+          "folder_id": "1ptkamgdJt_-uHZIqMwVW5xI5aTPkLhTn",
+          "pyqs_folder_id": "1lJ0RZG09j3ureS1eqMmzqHMb6TPaDFGs",
+          "notes_folder_id": "1nwNHZbuBtHZfSZE0w-90wLTd5GIHEjr2",
+          "branch": "cse"
+        },
+        {
+          "slug": "microprocessor",
+          "code": "",
+          "name": "MICROPROCESSOR ",
+          "folder_id": "17hA3qGJQP2upSenSdQEuYwazPEoxCNuX",
+          "pyqs_folder_id": "1B6ewlBD6Cd2BpSWWIYfReDilShanAunq",
+          "notes_folder_id": "1L0KVWoJWXkD9CQFvTOe9R5G44dzJqH2W",
+          "branch": "mnc"
+        },
+        {
+          "slug": "os",
+          "code": "",
+          "name": "OS",
+          "folder_id": "15XKhx0zt4no2ZTclHY4M_z3lDTds4YwP",
+          "pyqs_folder_id": "1CB70WCwsvn18cZ_N5XMK5dBXPv29V6bQ",
+          "notes_folder_id": "16ateKcOStg4bT4cAgtpAESG2WTm_aORE",
+          "branch": "mnc"
+        },
+        {
+          "slug": "os",
+          "code": "",
+          "name": "OS",
+          "folder_id": "1IGkqHVtL906F2qGd4eL4GC400gHwGHn3",
+          "pyqs_folder_id": "1NxKJEVfEvllpjyHTOzziUAC5pObx3b1N",
+          "notes_folder_id": "1ZuhjzYK4q0DKzYDArq6dk24jFDlGj-Mi",
+          "branch": "cse"
+        },
+        {
+          "slug": "vac",
+          "code": "",
+          "name": "VAC",
+          "folder_id": "1AYV9z9qR_Mw2feUrw1l-FCaV5BFBqx7Z",
+          "pyqs_folder_id": "1m5ZdrzlJw8jjJ51F8Bw5kmdSd1jjcJtR",
+          "notes_folder_id": "1eFH5AWBhg5TFe_tZatu_9yIU4sCFaYJX",
+          "branch": "mnc"
+        },
+        {
+          "slug": "vac",
+          "code": "",
+          "name": "VAC",
+          "folder_id": "1ldbbtY4tMJGX5tnhdnmC9qDzKHI0H4sI",
+          "pyqs_folder_id": "1oQqWFEfc9gDKGQyzCsjdFWWwZcFV60KR",
+          "notes_folder_id": "1mTDuCaZ8OApjdcX4ltsyGvVMPf-xOO6J",
+          "branch": "cse"
+        }
+      ]
     },
     {
       "semester_number": 5,
