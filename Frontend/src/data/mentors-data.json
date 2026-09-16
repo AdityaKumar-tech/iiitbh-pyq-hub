@@ -248,14 +248,6 @@
     "photoUrl": "https://drive.google.com/open?id=11kgeR3tu8dWoRCQ0lRCGsarHGwTC9s2e"
   },
   {
-    "name": "Suraj Kumar",
-    "branch": "CSE",
-    "year": "3rd Year",
-    "linkedin": "https://www.linkedin.com/in/skg58",
-    "specialty": "Technical Lead at Adhyaay & Software Engineer (Contract) | Full Stack Development & Cloud Deployment | Building scalable Node.js/Next.js systems, DSA alongside",
-    "photoUrl": "https://drive.google.com/open?id=1GPD0IfDSwivsxfjRAEbdg_f8pG-HI715"
-  },
-  {
     "name": "Deepak Anand",
     "branch": "CSE",
     "year": "2nd Year",
@@ -270,5 +262,21 @@
     "linkedin": "https://www.linkedin.com/in/ankit-kr-gupta-270bb3381",
     "specialty": "Reflection Incharge | E-Cell Technical Lead | Unnati JS Technical | Interested in Web & App Development",
     "photoUrl": "https://drive.google.com/open?id=1oh7Y7CrgtvlyMnUCndvfRHdXtTRpNeoY"
+  },
+  {
+    "name": "Amitayush",
+    "branch": "MAE",
+    "year": "2nd Year",
+    "linkedin": "http://linkedin.com/in/amitayush-407359368",
+    "specialty": "REC Club Lead | Robotics & automation | Interested in AI & ML | ",
+    "photoUrl": "https://drive.google.com/open?id=1R1QD-RQjk1mZR5ANwhEimbehfdRuiSgq"
+  },
+  {
+    "name": "Suraj Kumar",
+    "branch": "CSE",
+    "year": "3rd Year",
+    "linkedin": "https://www.linkedin.com/in/skg58",
+    "specialty": "Technical Lead at Adhyaay & Software Engineer (Contract) | Full Stack Development & Cloud Deployment | Building scalable Node.js/Next.js systems, DSA alongside",
+    "photoUrl": "https://drive.google.com/open?id=1GPD0IfDSwivsxfjRAEbdg_f8pG-HI715"
   }
 ]
