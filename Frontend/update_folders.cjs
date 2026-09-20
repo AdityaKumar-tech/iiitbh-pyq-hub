@@ -25,13 +25,23 @@ async function updateData() {
       console.log(`Checking ${subject.name} (${subject.folder_id})`);
       const children = await fetchChildren(subject.folder_id);
       
+      let pyqs_folder_id = "";
+      let notes_folder_id = "";
+
       for (const child of children) {
-        if (child.name.toUpperCase() === 'PYQS') {
-          subject.pyqs_folder_id = child.id;
-        } else if (child.name.toUpperCase() === 'NOTES') {
-          subject.notes_folder_id = child.id;
+        if (child.mimeType === "application/vnd.google-apps.folder") {
+          const upper = child.name.trim().toUpperCase();
+          if (upper.includes("PYQ") || upper.includes("PQY") || upper.startsWith("PREVIOUS")) {
+            pyqs_folder_id = child.id;
+          }
+          if (upper.includes("NOTE") || upper.includes("LECTURE")) {
+            notes_folder_id = child.id;
+          }
         }
       }
+
+      subject.pyqs_folder_id = pyqs_folder_id || subject.folder_id;
+      subject.notes_folder_id = notes_folder_id || subject.folder_id;
     }
   }
 

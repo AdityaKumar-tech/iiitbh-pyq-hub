@@ -53,21 +53,37 @@ const crawl = async () => {
       for (const subjectFolder of subjectFolders) {
         if (subjectFolder.mimeType !== "application/vnd.google-apps.folder") continue;
 
+        const rawSubjectName = subjectFolder.name.trim();
+
         let pyqs_folder_id = "";
         let notes_folder_id = "";
 
         const innerFolders = await fetchChildren(subjectFolder.id);
         for (const inner of innerFolders) {
           if (inner.mimeType === "application/vnd.google-apps.folder") {
-            if (inner.name.toUpperCase() === "PYQS") pyqs_folder_id = inner.id;
-            if (inner.name.toUpperCase() === "NOTES") notes_folder_id = inner.id;
+            const innerUpper = inner.name.trim().toUpperCase();
+            if (innerUpper.includes("PYQ") || innerUpper.includes("PQY") || innerUpper.startsWith("PREVIOUS")) {
+              pyqs_folder_id = inner.id;
+            }
+            if (innerUpper.includes("NOTE") || innerUpper.includes("LECTURE")) {
+              notes_folder_id = inner.id;
+            }
           }
         }
 
+        // Fallback: If no dedicated subfolders found, use subject folder ID
+        if (!pyqs_folder_id) pyqs_folder_id = subjectFolder.id;
+        if (!notes_folder_id) notes_folder_id = subjectFolder.id;
+
+        const slug = rawSubjectName
+          .toLowerCase()
+          .replace(/[^a-z0-9]+/g, '-')
+          .replace(/(^-|-$)/g, '');
+
         semObj.subjects.push({
-          slug: subjectFolder.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, ''),
+          slug,
           code: "",
-          name: subjectFolder.name,
+          name: rawSubjectName,
           folder_id: subjectFolder.id,
           pyqs_folder_id,
           notes_folder_id,

@@ -4,8 +4,6 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import {
   BookOpen,
-  FileText,
-  ClipboardList,
   ArrowUpRight,
   User,
 } from "lucide-react";
@@ -42,9 +40,15 @@ export default function SubjectCard({ subject, semesterId, index }) {
                   <div className="absolute -top-1 -right-1 h-3 w-3 rounded-full bg-green-500 opacity-0 group-hover:opacity-100 transition-all duration-300 shadow-[0_0_10px_rgba(34,197,94,0.8)]" />
                 </div>
 
-                <span className="inline-flex rounded-full bg-surface-2 px-3 py-1 text-xs font-semibold text-ink/80 border border-line/60">
-                  {subject.code}
-                </span>
+                {subject.code ? (
+                  <span className="inline-flex rounded-full bg-surface-2 px-3 py-1 text-xs font-semibold text-ink/80 border border-line/60">
+                    {subject.code}
+                  </span>
+                ) : subject.branch ? (
+                  <span className="inline-flex rounded-full bg-surface-2 px-3 py-1 text-xs font-semibold text-primary/90 border border-primary/20 uppercase">
+                    {subject.branch}
+                  </span>
+                ) : null}
               </div>
 
               <div className="flex h-8 w-8 items-center justify-center rounded-full bg-surface-2 text-muted border border-line/60 transition-all duration-300 group-hover:bg-primary group-hover:text-surface group-hover:rotate-45">

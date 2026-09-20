@@ -1,15 +1,12 @@
 // src/pages/SubjectPage.jsx
 
-import { useState, useMemo, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   ArrowLeft,
   AlertCircle,
-  Search,
-  X,
   FileText,
-  HelpCircle,
   Sparkles,
 } from "lucide-react";
 
@@ -23,17 +20,6 @@ import Footer from "../components/Footer";
 import pyqData from "../data/pyq-data.json";
 import { fetchPYQsFromDrive } from "../lib/driveApi";
 
-// Debounce hook for smooth filtering
-function useDebouncedValue(value, delay = 300) {
-  const [debounced, setDebounced] = useState(value);
-
-  useEffect(() => {
-    const timer = setTimeout(() => setDebounced(value), delay);
-    return () => clearTimeout(timer);
-  }, [value, delay]);
-
-  return debounced;
-}
 
 function ResourceRowSkeleton() {
   return (
@@ -63,10 +49,10 @@ export default function SubjectPage() {
   useEffect(() => {
     let folderIdToFetch = null;
     if (subject) {
-      if (activeTab === "pyqs" && subject.pyqs_folder_id) {
-         folderIdToFetch = subject.pyqs_folder_id;
-      } else if (activeTab === "notes" && subject.notes_folder_id) {
-         folderIdToFetch = subject.notes_folder_id;
+      if (activeTab === "pyqs") {
+        folderIdToFetch = subject.pyqs_folder_id || subject.folder_id;
+      } else if (activeTab === "notes") {
+        folderIdToFetch = subject.notes_folder_id || subject.folder_id;
       }
     }
 
