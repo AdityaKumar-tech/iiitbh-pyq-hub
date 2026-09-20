@@ -2,8 +2,21 @@
 
 import { motion } from "framer-motion";
 import PathIndicator from "./PathIndicator";
+import PYQ from "../data/pyq-data.json";
+import assignmentData from "../data/assignment-data.json";
+
+const countSubjects = (data) =>
+  Array.isArray(data?.semesters)
+    ? data.semesters.reduce(
+        (total, semester) =>
+          total + (Array.isArray(semester?.subjects) ? semester.subjects.length : 0),
+        0
+      )
+    : 0;
 
 export default function HeroSection() {
+  const courseCount = countSubjects(PYQ) + countSubjects(assignmentData);
+
   return (
     <section className="relative overflow-hidden">
       {/* Background Glow — smaller & closer-cropped on mobile so it doesn't overwhelm */}
@@ -48,7 +61,7 @@ export default function HeroSection() {
               </div>
 
               <div className="rounded-xl sm:rounded-2xl bg-surface border border-line px-3 py-3 sm:px-5 sm:py-4 shadow-rest text-center sm:text-left">
-                <p className="text-lg sm:text-2xl font-black text-ink">1000+</p>
+                <p className="text-lg sm:text-2xl font-black text-ink">{courseCount}</p>
                 <p className="text-[11px] sm:text-sm text-muted mt-0.5 sm:mt-1">
                   Resources
                 </p>
