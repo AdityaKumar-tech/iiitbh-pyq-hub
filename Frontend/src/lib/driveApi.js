@@ -43,7 +43,7 @@ export async function fetchRecentResourcesFromDrive(pyqData) {
     const targets = [];
     for (const sem of pyqData.semesters) {
       for (const sub of sem.subjects) {
-        if (sub.pyqs_folder_id && sub.pyqs_folder_id !== sub.folder_id) {
+        if (sub.pyqs_folder_id) {
           targets.push({
             folderId: sub.pyqs_folder_id,
             semNumber: sem.semester_number,
@@ -53,7 +53,7 @@ export async function fetchRecentResourcesFromDrive(pyqData) {
             color: "from-emerald-500 to-teal-500",
           });
         }
-        if (sub.notes_folder_id && sub.notes_folder_id !== sub.folder_id) {
+        if (sub.notes_folder_id && sub.notes_folder_id !== sub.pyqs_folder_id) {
           targets.push({
             folderId: sub.notes_folder_id,
             semNumber: sem.semester_number,
@@ -63,55 +63,62 @@ export async function fetchRecentResourcesFromDrive(pyqData) {
             color: "from-indigo-500 to-violet-500",
           });
         }
-        if (sub.pyqs_folder_id && sub.pyqs_folder_id === sub.folder_id) {
-          targets.push({
-            folderId: sub.folder_id,
-            semNumber: sem.semester_number,
-            subjectName: sub.name,
-            subjectSlug: sub.slug,
-            type: "Resource",
-            color: "from-orange-500 to-amber-500",
-          });
-        }
       }
     }
 
-    if (targets.length === 0) return [];
-
-    // Query folders in parallel
-    const fetchPromises = targets.map(async (target) => {
-      const query = `'${target.folderId}' in parents and trashed = false`;
-      const url = `https://www.googleapis.com/drive/v3/files?q=${encodeURIComponent(query)}&key=${apiKey}&fields=files(id,name,mimeType,webViewLink,webContentLink,modifiedTime)&supportsAllDrives=true&includeItemsFromAllDrives=true`;
-
-      try {
-        const response = await fetch(url);
-        if (!response.ok) return [];
-        const data = await response.json();
-        const files = data.files || [];
-
-        return files.map((file) => ({
-          id: file.id,
-          title: file.name,
-          type: target.type,
-          semester: `Semester ${target.semNumber}`,
-          semNumber: target.semNumber,
-          subject: target.subjectName,
-          subjectSlug: target.subjectSlug,
-          subInfo: `Sem ${target.semNumber} • ${target.subjectName}`,
-          modifiedTime: file.modifiedTime,
-          color: target.color,
-          viewUrl: file.webViewLink,
-          downloadUrl: file.webContentLink,
-        }));
-      } catch (_err) {
-        return [];
+    // Deduplicate target folder IDs to avoid duplicate queries
+    const uniqueFolderMap = new Map();
+    for (const t of targets) {
+      if (!uniqueFolderMap.has(t.folderId)) {
+        uniqueFolderMap.set(t.folderId, t);
       }
-    });
+    }
+    const uniqueTargets = Array.from(uniqueFolderMap.values());
+    if (uniqueTargets.length === 0) return [];
 
-    const results = await Promise.all(fetchPromises);
-    const allFiles = results.flat();
+    // Chunk requests into batches of 40 for optimal performance
+    const CHUNK_SIZE = 40;
+    const allFiles = [];
+
+    for (let i = 0; i < uniqueTargets.length; i += CHUNK_SIZE) {
+      const chunk = uniqueTargets.slice(i, i + CHUNK_SIZE);
+      const chunkPromises = chunk.map(async (target) => {
+        const query = `'${target.folderId}' in parents and trashed = false`;
+        const url = `https://www.googleapis.com/drive/v3/files?q=${encodeURIComponent(query)}&key=${apiKey}&fields=files(id,name,mimeType,webViewLink,webContentLink,modifiedTime)&supportsAllDrives=true&includeItemsFromAllDrives=true`;
+
+        try {
+          const response = await fetch(url);
+          if (!response.ok) return [];
+          const data = await response.json();
+          const files = data.files || [];
+
+          return files.map((file) => ({
+            id: file.id,
+            title: file.name,
+            type: target.type,
+            semester: `Semester ${target.semNumber}`,
+            semNumber: target.semNumber,
+            subject: target.subjectName,
+            subjectSlug: target.subjectSlug,
+            subInfo: `Sem ${target.semNumber} • ${target.subjectName}`,
+            modifiedTime: file.modifiedTime,
+            color: target.type === "PYQ" ? "from-emerald-500 to-teal-500" : "from-indigo-500 to-violet-500",
+            viewUrl: file.webViewLink,
+            downloadUrl: file.webContentLink,
+          }));
+        } catch {
+          return [];
+        }
+      });
+
+      const chunkResults = await Promise.all(chunkPromises);
+      allFiles.push(...chunkResults.flat());
+    }
+
+    // Sort by modifiedTime descending (newest first)
     allFiles.sort((a, b) => new Date(b.modifiedTime) - new Date(a.modifiedTime));
 
+    // Return the top 4 most recently uploaded/modified files
     return allFiles.slice(0, 4);
   } catch (error) {
     console.error("Error fetching recent resources:", error);
