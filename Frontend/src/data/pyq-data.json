@@ -975,6 +975,15 @@
           "branch": "mae"
         },
         {
+          "slug": "finance",
+          "code": "",
+          "name": "FINANCE",
+          "folder_id": "1miXyRWqVxtbpKpxZEZ0hq7CJdL-tlC2s",
+          "pyqs_folder_id": "1GS410b0G3eW7TTP5H4hzxmPkSzygi_ML",
+          "notes_folder_id": "1BW8v-4gwX_ZfbhP-P131jz-nNl18K5gC",
+          "branch": "mnc"
+        },
+        {
           "slug": "graph-algorihtm",
           "code": "",
           "name": "Graph Algorihtm",
