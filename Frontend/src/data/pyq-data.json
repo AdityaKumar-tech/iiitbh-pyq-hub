@@ -205,6 +205,15 @@
           "branch": "mnc"
         },
         {
+          "slug": "semiconductor",
+          "code": "",
+          "name": "SEMICONDUCTOR",
+          "folder_id": "1svbAahciVfnibSSjEiky1x5Is6VSxp7I",
+          "pyqs_folder_id": "1Tm1JwdCnEtMqxAl64jtvJ1TWqlW_SWRT",
+          "notes_folder_id": "1f4mBD5nldrympuJf1Dn8xeOFTQMBaTER",
+          "branch": "cse"
+        },
+        {
           "slug": "semiconductor-manufacturing",
           "code": "",
           "name": "Semiconductor Manufacturing",
@@ -400,6 +409,15 @@
           "pyqs_folder_id": "1lk-br1t3kuHzgXU8tuy4zfjn-hmshNYy",
           "notes_folder_id": "1lk-br1t3kuHzgXU8tuy4zfjn-hmshNYy",
           "branch": "mae"
+        },
+        {
+          "slug": "pyqs",
+          "code": "",
+          "name": "PYQS",
+          "folder_id": "1aXE6KQ4pnOFz_ddWmu_oy8IC7OAzOCXd",
+          "pyqs_folder_id": "1aXE6KQ4pnOFz_ddWmu_oy8IC7OAzOCXd",
+          "notes_folder_id": "1aXE6KQ4pnOFz_ddWmu_oy8IC7OAzOCXd",
+          "branch": "cse"
         },
         {
           "slug": "sem-2-pyqs-2026",
@@ -952,8 +970,8 @@
           "code": "",
           "name": "Digital Signal Processing",
           "folder_id": "1Y26jA8NxzYW_0BhupbRPGopr-nRqCGtk",
-          "pyqs_folder_id": "1Y26jA8NxzYW_0BhupbRPGopr-nRqCGtk",
-          "notes_folder_id": "1Y26jA8NxzYW_0BhupbRPGopr-nRqCGtk",
+          "pyqs_folder_id": "1FqsyqkoKTegylpEzG36ZpXHlsGS1gROo",
+          "notes_folder_id": "1bXhHZ2eOiNyxwHGlTTg3Oa7_MShQ1fTd",
           "branch": "ece"
         },
         {
@@ -1015,8 +1033,8 @@
           "code": "",
           "name": "Iot and Emebedded Systems",
           "folder_id": "1GrpVbK1cGINvCPtJhMXHEPiDPf67tPu2",
-          "pyqs_folder_id": "1GrpVbK1cGINvCPtJhMXHEPiDPf67tPu2",
-          "notes_folder_id": "1GrpVbK1cGINvCPtJhMXHEPiDPf67tPu2",
+          "pyqs_folder_id": "1jSvpaD-gk8WgIw3DNTIoMz-yaJ9Km_td",
+          "notes_folder_id": "1OYJVq1mr026jGVDov-1iGGbMN4UrLopb",
           "branch": "ece"
         },
         {
@@ -1063,6 +1081,15 @@
           "pyqs_folder_id": "178EZK2-CEZNK46bS_RcaCp4GA3vl_MI-",
           "notes_folder_id": "1pKvrFN5Y6W_QkagLoE16lE6VIjeXWE6c",
           "branch": "mae"
+        },
+        {
+          "slug": "vlsi",
+          "code": "",
+          "name": "VLSI",
+          "folder_id": "1vhhFoQQyDxf6pk0kdoY4LLKM9fV-FPwu",
+          "pyqs_folder_id": "1G0_d4RCgJ7MtCcJnASJf8CSWjm2WkSyC",
+          "notes_folder_id": "1oKA5xUSOEogA3wUuGxRTJ6D2jg5BAayR",
+          "branch": "ece"
         }
       ]
     },
@@ -1073,6 +1100,15 @@
       "folder_id": "1g9usKVU4uYKG0nCnoeij6tAP824wRgyw",
       "subjects": [
         {
+          "slug": "antena",
+          "code": "",
+          "name": "ANTENA",
+          "folder_id": "1cHsuyjxQY9KMGmWSJ1MFUd6Nf3hRI0sW",
+          "pyqs_folder_id": "1EMuHAqsXFPLxzwb1FiUBvN4k6-dUz80q",
+          "notes_folder_id": "1YeWVLFgHRKA-XsVctLOAnhQQBQDMGpEK",
+          "branch": "ece"
+        },
+        {
           "slug": "ci",
           "code": "",
           "name": "CI",
@@ -1082,6 +1118,15 @@
           "branch": "mae"
         },
         {
+          "slug": "computer-vision",
+          "code": "",
+          "name": "COMPUTER VISION",
+          "folder_id": "1ASGYtiFavYEy7ODvp1LgQg-xaHY492bD",
+          "pyqs_folder_id": "1gO4e5Rj3_tIl2NwGCfbjgB_-t6_gqoXz",
+          "notes_folder_id": "1jA56kMj4rmuOHpM4Qq5qU7VNsdztrUYh",
+          "branch": "ece"
+        },
+        {
           "slug": "environmental",
           "code": "",
           "name": "ENVIRONMENTAL",
@@ -1089,6 +1134,15 @@
           "pyqs_folder_id": "1uQBAoSTbBVH2bOPitz0fxyOwYHCV5w8C",
           "notes_folder_id": "1EeOwCjLyiesMFXcSS0EUaTb6rC8iSoiU",
           "branch": "mae"
+        },
+        {
+          "slug": "evs",
+          "code": "",
+          "name": "EVS",
+          "folder_id": "1JHgUNk51Q789KAtVsQca3suTTojN53dw",
+          "pyqs_folder_id": "1ZPINGzb0X3xZWEsF_GyVlAr59IXA1RH7",
+          "notes_folder_id": "1QkKKdIPsJVoAatoKdvvdOdll_fkc3XF3",
+          "branch": "ece"
         },
         {
           "slug": "fem",
@@ -1109,6 +1163,24 @@
           "branch": "mae"
         },
         {
+          "slug": "machine-learning",
+          "code": "",
+          "name": "MACHINE LEARNING",
+          "folder_id": "1HiRlVe5wcH5D0Klec2gBbilz0IEVv97x",
+          "pyqs_folder_id": "1XI2UXevNDfKnP8vyVAadvwPvp0s_ku7S",
+          "notes_folder_id": "1ZGi2i8mWaYcjEnOf5Cu0lDQDeoRkagI_",
+          "branch": "ece"
+        },
+        {
+          "slug": "mecha-and-auto",
+          "code": "",
+          "name": "MECHA AND AUTO",
+          "folder_id": "1x2AcTQIb0G5LsG3a6YVaziclEBryisfl",
+          "pyqs_folder_id": "1HXTF0NWbx4JYBjRwKbvXJoURLWHS9Jtt",
+          "notes_folder_id": "1omB5eBR_lrhT52mXG7nFMEAF1vZuU4LD",
+          "branch": "ece"
+        },
+        {
           "slug": "mems",
           "code": "",
           "name": "MEMS",
@@ -1125,6 +1197,33 @@
           "pyqs_folder_id": "1oif5aUHjvSasoAuZueJHmrAMBA2WzXe2",
           "notes_folder_id": "1ZJ-dmsjBmjh1TuKFTuz7s9EuvxdXca9A",
           "branch": "mae"
+        },
+        {
+          "slug": "oops",
+          "code": "",
+          "name": "OOPS",
+          "folder_id": "1uiQUqBBLIrujOw-2QtKWm3-85hiFmHFI",
+          "pyqs_folder_id": "1-ze-72gmDTUoxDChdoMzDYvCV6suJXd0",
+          "notes_folder_id": "1SqUDbFGVhZ9Vx3myF6lCyu7E2FfBICDZ",
+          "branch": "ece"
+        },
+        {
+          "slug": "recent-trend-in-wireless-communication",
+          "code": "",
+          "name": "RECENT TREND IN WIRELESS COMMUNICATION",
+          "folder_id": "1TQARrS0_z_ETSk4rZeh9vrJe7Qqk1Tph",
+          "pyqs_folder_id": "1TA6Vg3hHr7iCDhOJME0gWvcx1qAvPVsZ",
+          "notes_folder_id": "1JZc84ub0Ll3KliC_kB1UZOmNh2nk1YD1",
+          "branch": "ece"
+        },
+        {
+          "slug": "sensors-and-actuators",
+          "code": "",
+          "name": "SENSORS AND ACTUATORS",
+          "folder_id": "1Fb4E-VqLWZWo2Vl3aQf336pkjVJFSlkA",
+          "pyqs_folder_id": "1R5Nbv0iOPPAjFlivoWLH_Vu7ryQpVib7",
+          "notes_folder_id": "1UdIJLYAoBKAiHZYMenWBHDgv-fj9Qd2t",
+          "branch": "ece"
         }
       ]
     },
