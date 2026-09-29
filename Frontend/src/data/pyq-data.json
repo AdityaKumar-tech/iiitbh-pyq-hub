@@ -951,9 +951,18 @@
           "slug": "computational-intelligence",
           "code": "",
           "name": "Computational Intelligence",
+          "folder_id": "14a6nSWD7QgQOPtN7hj0Kw3uC7M6YCOJh",
+          "pyqs_folder_id": "12b6r_X21ZHg4177gKi4FdCRLyye46RDn",
+          "notes_folder_id": "1kvsFhIR_75FE9Csr7FJJVdtpeJ-Ybp4P",
+          "branch": "mnc"
+        },
+        {
+          "slug": "computational-intelligence",
+          "code": "",
+          "name": "Computational Intelligence",
           "folder_id": "158m0mAQU5ErscGWoOS_P98Fce0Tk2HLn",
-          "pyqs_folder_id": "158m0mAQU5ErscGWoOS_P98Fce0Tk2HLn",
-          "notes_folder_id": "158m0mAQU5ErscGWoOS_P98Fce0Tk2HLn",
+          "pyqs_folder_id": "174rR1p0W5lZMNUNQ_dMQr0uogJUhxt96",
+          "notes_folder_id": "12jvbMClhs9Y29-BGbu95RitFMeOFOv1y",
           "branch": "ece"
         },
         {
@@ -1045,6 +1054,24 @@
           "pyqs_folder_id": "1F2DJWpwfMCab0LNX9daDjuWdRqz6cige",
           "notes_folder_id": "1F2DJWpwfMCab0LNX9daDjuWdRqz6cige",
           "branch": "ece"
+        },
+        {
+          "slug": "machine-learning",
+          "code": "",
+          "name": "MACHINE LEARNING",
+          "folder_id": "1mfZuoxUb_GuMGXPIsECal6bAelYh6Z7c",
+          "pyqs_folder_id": "1ZsXaZe2ZNLCuycrYBKRgTadJAMme4Oko",
+          "notes_folder_id": "1r7wpp_q5x1SlDDMMpqACsjVdlAEDmH2j",
+          "branch": "mnc"
+        },
+        {
+          "slug": "machine-learning",
+          "code": "",
+          "name": "MACHINE LEARNING",
+          "folder_id": "1s_f0J7lYaD52KVgjSIxrpmg-DtwUy87v",
+          "pyqs_folder_id": "1YB659HCombBuDuZV2kay6B6huiso-0Gq",
+          "notes_folder_id": "1aGHM4b8msgW3zLOdilomv4PudX5BP7i_",
+          "branch": "cse"
         },
         {
           "slug": "mathematical-modeling",
@@ -1161,15 +1188,6 @@
           "pyqs_folder_id": "1bCDmK_xEhJIR4tPnWc4Ki1McugsGnTzb",
           "notes_folder_id": "1Gi1EsHVlOLdu1NO7pWMi4nr7pcagztDW",
           "branch": "mae"
-        },
-        {
-          "slug": "machine-learning",
-          "code": "",
-          "name": "MACHINE LEARNING",
-          "folder_id": "1HiRlVe5wcH5D0Klec2gBbilz0IEVv97x",
-          "pyqs_folder_id": "1XI2UXevNDfKnP8vyVAadvwPvp0s_ku7S",
-          "notes_folder_id": "1ZGi2i8mWaYcjEnOf5Cu0lDQDeoRkagI_",
-          "branch": "ece"
         },
         {
           "slug": "mecha-and-auto",

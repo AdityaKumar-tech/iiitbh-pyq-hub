@@ -14,39 +14,96 @@ const fetchChildren = async (parentId) => {
   return data.files || [];
 };
 
-async function updateData() {
-  const dataPath = './src/data/pyq-data.json';
-  const data = JSON.parse(fs.readFileSync(dataPath, 'utf8'));
+const getSemesterDescription = (num) => {
+  const year = Math.ceil(num / 2);
+  const yearStr = ["First", "Second", "Third", "Fourth"][year - 1] || "Unknown";
+  const type = num % 2 === 0 ? "Even" : "Odd";
+  return `${yearStr} year, ${type} Semester`;
+};
 
-  for (const semester of data.semesters) {
-    for (const subject of semester.subjects) {
-      if (!subject.folder_id) continue;
-      
-      console.log(`Checking ${subject.name} (${subject.folder_id})`);
-      const children = await fetchChildren(subject.folder_id);
-      
-      let pyqs_folder_id = "";
-      let notes_folder_id = "";
+const crawl = async () => {
+  console.log("Crawling root folder...");
+  const semestersData = [];
+  const semFolders = await fetchChildren(rootFolderId);
 
-      for (const child of children) {
-        if (child.mimeType === "application/vnd.google-apps.folder") {
-          const upper = child.name.trim().toUpperCase();
-          if (upper.includes("PYQ") || upper.includes("PQY") || upper.startsWith("PREVIOUS")) {
-            pyqs_folder_id = child.id;
-          }
-          if (upper.includes("NOTE") || upper.includes("LECTURE")) {
-            notes_folder_id = child.id;
+  for (const semFolder of semFolders) {
+    if (semFolder.mimeType !== "application/vnd.google-apps.folder") continue;
+
+    const numMatch = semFolder.name.match(/\d+/);
+    const num = numMatch ? parseInt(numMatch[0]) : 0;
+
+    const semObj = {
+      semester_number: num,
+      title: `Semester ${num}`,
+      description: getSemesterDescription(num),
+      folder_id: semFolder.id,
+      subjects: [],
+    };
+
+    console.log(`Crawling ${semFolder.name}...`);
+    const branchFolders = await fetchChildren(semFolder.id);
+
+    for (const branchFolder of branchFolders) {
+      if (branchFolder.mimeType !== "application/vnd.google-apps.folder") continue;
+
+      const branchName = branchFolder.name.toLowerCase().trim();
+      console.log(`  Crawling branch ${branchFolder.name}...`);
+
+      const subjectFolders = await fetchChildren(branchFolder.id);
+      for (const subjectFolder of subjectFolders) {
+        if (subjectFolder.mimeType !== "application/vnd.google-apps.folder") continue;
+
+        const rawSubjectName = subjectFolder.name.trim();
+
+        let pyqs_folder_id = "";
+        let notes_folder_id = "";
+
+        const innerFolders = await fetchChildren(subjectFolder.id);
+        for (const inner of innerFolders) {
+          if (inner.mimeType === "application/vnd.google-apps.folder") {
+            const innerUpper = inner.name.trim().toUpperCase();
+            if (innerUpper.includes("PYQ") || innerUpper.includes("PQY") || innerUpper.startsWith("PREVIOUS")) {
+              pyqs_folder_id = inner.id;
+            }
+            if (innerUpper.includes("NOTE") || innerUpper.includes("LECTURE")) {
+              notes_folder_id = inner.id;
+            }
           }
         }
-      }
 
-      subject.pyqs_folder_id = pyqs_folder_id || subject.folder_id;
-      subject.notes_folder_id = notes_folder_id || subject.folder_id;
+        // Fallback: If no dedicated subfolders found, use subject folder ID
+        if (!pyqs_folder_id) pyqs_folder_id = subjectFolder.id;
+        if (!notes_folder_id) notes_folder_id = subjectFolder.id;
+
+        const slug = rawSubjectName
+          .toLowerCase()
+          .replace(/[^a-z0-9]+/g, '-')
+          .replace(/(^-|-$)/g, '');
+
+        semObj.subjects.push({
+          slug,
+          code: "",
+          name: rawSubjectName,
+          folder_id: subjectFolder.id,
+          pyqs_folder_id,
+          notes_folder_id,
+          branch: branchName,
+        });
+      }
     }
+
+    semObj.subjects.sort((a, b) => a.name.localeCompare(b.name));
+    semestersData.push(semObj);
   }
 
-  fs.writeFileSync(dataPath, JSON.stringify(data, null, 2));
-  console.log('Finished updating data!');
-}
+  semestersData.sort((a, b) => a.semester_number - b.semester_number);
 
-updateData();
+  const finalData = { semesters: semestersData };
+  fs.writeFileSync(
+    "./src/data/pyq-data.json",
+    JSON.stringify(finalData, null, 2)
+  );
+  console.log("pyq-data.json updated successfully!");
+};
+
+crawl().catch(console.error);
