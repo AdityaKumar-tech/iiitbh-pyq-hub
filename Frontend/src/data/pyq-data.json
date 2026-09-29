@@ -1011,12 +1011,30 @@
           "branch": "mnc"
         },
         {
+          "slug": "graph-algo",
+          "code": "",
+          "name": "GRAPH ALGO",
+          "folder_id": "1SoYacqs2S0pWPaxCbaslkC0ERvRtMWji",
+          "pyqs_folder_id": "1wt1bTRq64w9kWx8gNi56tezJiURdnurO",
+          "notes_folder_id": "13R1p5YxCg4dsq6xcpMbKYzs-VnP2J6ld",
+          "branch": "mnc"
+        },
+        {
+          "slug": "graph-algo",
+          "code": "",
+          "name": "GRAPH ALGO",
+          "folder_id": "1K2SohTUqRoALxDRR6fbuIFsi_Ijtv2BW",
+          "pyqs_folder_id": "1jRTiBmtk3WujtbSW3_mzlx-Ip_8D0KjL",
+          "notes_folder_id": "1i-a8hNzfAaTVZjxNOiv2aAAikX-ZYhn9",
+          "branch": "cse"
+        },
+        {
           "slug": "graph-algorihtm",
           "code": "",
           "name": "Graph Algorihtm",
           "folder_id": "1_N--NxrE8oEs9B2fyATZJlsU8cSWviZX",
-          "pyqs_folder_id": "1_N--NxrE8oEs9B2fyATZJlsU8cSWviZX",
-          "notes_folder_id": "1_N--NxrE8oEs9B2fyATZJlsU8cSWviZX",
+          "pyqs_folder_id": "1VaCIe46tv8OoxvcvQRfJR3to4HQaDrRm",
+          "notes_folder_id": "17jDBJ_liiD5BTnYjZRQossz-KZ68laBL",
           "branch": "ece"
         },
         {
