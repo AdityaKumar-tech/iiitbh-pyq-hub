@@ -20,7 +20,7 @@ export default function SubjectCard({ subject, semesterId, index }) {
       }}
     >
       <Link
-        to={`/resources/semester-${semesterId}/${subject.slug}`}
+        to={`/resources/semester-${semesterId}/${subject.slug}${subject.branch ? `?branch=${subject.branch}` : ""}`}
         className="group relative block overflow-hidden rounded-card border border-line/80 bg-surface p-6 shadow-rest transition-all duration-300 hover:shadow-hover hover:-translate-y-1 hover:border-primary/30"
       >
         {/* Soft Ambient Glow */}

@@ -12,10 +12,17 @@ export default function SubjectHeader({ subject, semesterId }) {
             <BookOpen size={22} className="text-primary" />
           </div>
           <div>
-            <div className="flex items-center gap-2 mb-1.5">
-              <span className="text-[11px] font-semibold text-muted bg-[#F1F5F9] px-2 py-1 rounded-md">
-                {subject.code}
-              </span>
+            <div className="flex items-center gap-2 mb-1.5 flex-wrap">
+              {subject.code && (
+                <span className="text-[11px] font-semibold text-muted bg-[#F1F5F9] dark:bg-surface-2 px-2 py-1 rounded-md">
+                  {subject.code}
+                </span>
+              )}
+              {subject.branch && (
+                <span className="text-[11px] font-bold text-primary bg-primary/10 border border-primary/20 px-2.5 py-0.5 rounded-md uppercase">
+                  {subject.branch}
+                </span>
+              )}
               <span className="text-xs text-muted">Semester {semesterId}</span>
             </div>
             <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-ink">
