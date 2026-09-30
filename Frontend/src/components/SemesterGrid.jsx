@@ -69,9 +69,6 @@ export default function SemesterGrid() {
       {/* Heading */}
       <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
         <div>
-          <span className="inline-block px-3 py-1 text-xs font-semibold tracking-wider uppercase rounded-full bg-primary/10 text-primary mb-3">
-            Academic Resources
-          </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-ink">
             Browse by Semester
           </h2>

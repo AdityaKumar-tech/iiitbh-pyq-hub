@@ -138,7 +138,7 @@ const leads = [
     branch: "ECE",
     year: "3rd Year",
     linkedin: "https://www.linkedin.com/in/vansh-gupta9801",
-    speciality: "DSA | CP | Web Dev | Google Cloud | Sponsorship Co Lead Enyugma | TEDx Operations Lead | Adhyaay Executive Coordinator ",
+    speciality: "DSA | CP | Web Dev | Google Cloud | TEDx Operations Lead | Adhyaay Executive Coordinator ",
     photoUrl: "https://drive.google.com/open?id=1mbhHYuYOjJlIjdF5GJlYntd9pAatXXVi",
   },
   {
