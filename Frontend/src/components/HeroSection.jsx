@@ -33,9 +33,6 @@ export default function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.55 }}
           >
-            <span className="inline-flex items-center rounded-full border border-line bg-surface px-3.5 py-1.5 text-xs sm:text-sm font-medium text-primary shadow-rest">
-              🎓 IIIT Bhagalpur Academic Portal
-            </span>
 
             <h1 className="mt-5 sm:mt-6 text-3xl sm:text-5xl md:text-6xl font-black tracking-tight text-ink leading-[1.15] sm:leading-[1.1]">
               Everything you need for

@@ -101,10 +101,6 @@ export default function RecentResources() {
       {/* Heading */}
       <div className="flex items-end justify-between mb-10">
         <div>
-          <p className="font-semibold text-primary mb-2 flex items-center gap-1.5">
-            <Sparkles size={16} /> Latest Uploads
-          </p>
-
           <h2 className="text-4xl font-black tracking-tight text-ink">
             Recently Uploaded
           </h2>
@@ -117,7 +113,7 @@ export default function RecentResources() {
       </div>
 
       {/* Cards Grid */}
-      <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-6 min-h-[320px]">
+      <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-6 min-h-80">
         {loading ? (
           Array.from({ length: 4 }).map((_, i) => (
             <ResourceSkeleton key={i} />
