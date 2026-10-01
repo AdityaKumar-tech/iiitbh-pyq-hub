@@ -939,15 +939,6 @@
           "branch": "mae"
         },
         {
-          "slug": "ci",
-          "code": "",
-          "name": "CI",
-          "folder_id": "1zwcr463hd7Yjv7tMZYELs4SLUyNMTPlV",
-          "pyqs_folder_id": "1EGRKUZicBoA9AHbRLw2Dep5H-2jN1ybU",
-          "notes_folder_id": "1dtC1yUY0bIn-Rk0n67MVDc9Pf-duqUOK",
-          "branch": "cse"
-        },
-        {
           "slug": "computational-intelligence",
           "code": "",
           "name": "Computational Intelligence",
@@ -964,6 +955,15 @@
           "pyqs_folder_id": "174rR1p0W5lZMNUNQ_dMQr0uogJUhxt96",
           "notes_folder_id": "12jvbMClhs9Y29-BGbu95RitFMeOFOv1y",
           "branch": "ece"
+        },
+        {
+          "slug": "computational-intelligence",
+          "code": "",
+          "name": "Computational Intelligence",
+          "folder_id": "1zwcr463hd7Yjv7tMZYELs4SLUyNMTPlV",
+          "pyqs_folder_id": "1EGRKUZicBoA9AHbRLw2Dep5H-2jN1ybU",
+          "notes_folder_id": "1dtC1yUY0bIn-Rk0n67MVDc9Pf-duqUOK",
+          "branch": "cse"
         },
         {
           "slug": "computer-networks",
