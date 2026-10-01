@@ -984,6 +984,15 @@
           "branch": "mae"
         },
         {
+          "slug": "daa-minor",
+          "code": "",
+          "name": "DAA(MINOR)",
+          "folder_id": "1xeETwMioST9ITkOkTVZxadxnclyRvSt5",
+          "pyqs_folder_id": "1fsX35v3d6mV9N70IJcdexaNt2nm739vn",
+          "notes_folder_id": "12KgoJQE9aP6r1fh_Hn12EKrnbbuA6UFP",
+          "branch": "mae"
+        },
+        {
           "slug": "digital-signal-processing",
           "code": "",
           "name": "Digital Signal Processing",
