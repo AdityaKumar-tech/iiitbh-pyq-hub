@@ -966,6 +966,15 @@
           "branch": "ece"
         },
         {
+          "slug": "computer-networks",
+          "code": "",
+          "name": "COMPUTER NETWORKS",
+          "folder_id": "1P2MG4fhbg0asHyDXXrC8hCGIZxswlQDu",
+          "pyqs_folder_id": "1DH_Y_K1dKQPYypc92aACXixmQUp4JwoS",
+          "notes_folder_id": "1xJhCzgpnqkSLqsQ34qX-VLF_Je1iElLI",
+          "branch": "cse"
+        },
+        {
           "slug": "controll-system",
           "code": "",
           "name": "CONTROLL SYSTEM",
@@ -1128,6 +1137,15 @@
           "branch": "mae"
         },
         {
+          "slug": "software-eng",
+          "code": "",
+          "name": "SOFTWARE ENG",
+          "folder_id": "12od_cftbmC9_UIDEsW0CzaVTmSRkDnjn",
+          "pyqs_folder_id": "1Py__r4cXyULuYcXoMei42OMLKYW_1_JP",
+          "notes_folder_id": "1kd_ikYQFhCi3hZrEQorXwkALCZozrevQ",
+          "branch": "cse"
+        },
+        {
           "slug": "vlsi",
           "code": "",
           "name": "VLSI",
@@ -1223,15 +1241,6 @@
           "folder_id": "1LJy_HvvjPls8qpaqUEeIWgv4UN2bptd5",
           "pyqs_folder_id": "1uM2LTOQtI0j0TsO7c8mLL_pGN6FPHnC6",
           "notes_folder_id": "1GHbtmO4w5j8Wn1wyAH66_IBcc4oXJBQf",
-          "branch": "mae"
-        },
-        {
-          "slug": "ml",
-          "code": "",
-          "name": "ML",
-          "folder_id": "1OispG0O-efS3eTO6WNw43JVdKmq5fzkx",
-          "pyqs_folder_id": "1oif5aUHjvSasoAuZueJHmrAMBA2WzXe2",
-          "notes_folder_id": "1ZJ-dmsjBmjh1TuKFTuz7s9EuvxdXca9A",
           "branch": "mae"
         },
         {
