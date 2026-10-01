@@ -37,7 +37,7 @@ function ResourceRowSkeleton() {
 
 export default function SubjectPage() {
   const { semesterId, subjectSlug } = useParams();
-  const [searchParams, setSearchParams] = useSearchParams();
+  const [searchParams] = useSearchParams();
   const branchParam = searchParams.get("branch");
 
   const id = parseInt(semesterId?.replace("semester-", "") || "1");
@@ -144,31 +144,6 @@ export default function SubjectPage() {
               transition={{ delay: 0.08, duration: 0.35 }}
             >
               <SubjectHeader subject={subject} semesterId={id} />
-
-              {matchingSubjects.length > 1 && (
-                <div className="flex items-center gap-2 mb-6 flex-wrap">
-                  <span className="text-xs font-semibold text-muted uppercase tracking-wider">Branch:</span>
-                  <div className="inline-flex items-center gap-1 p-1 bg-surface-2 rounded-xl border border-line">
-                    {matchingSubjects.map((sub) => {
-                      const isSelected = subject?.branch?.toLowerCase() === sub.branch?.toLowerCase();
-                      return (
-                        <button
-                          key={sub.branch}
-                          type="button"
-                          onClick={() => setSearchParams({ branch: sub.branch })}
-                          className={`px-3 py-1 text-xs font-bold rounded-lg transition-all uppercase cursor-pointer ${
-                            isSelected
-                              ? "bg-primary text-white shadow-xs"
-                              : "text-muted hover:text-ink"
-                          }`}
-                        >
-                          {sub.branch}
-                        </button>
-                      );
-                    })}
-                  </div>
-                </div>
-              )}
             </motion.div>
 
             {/* Content Control Area */}
